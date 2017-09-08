@@ -121,4 +121,66 @@
   </verbs>
 </ThingDef>
 
+<ThingDef ParentName="BalancedBaseBullet">
+  <defName>Bullet_Rush-B</defName>
+  <label>CYKABLYAT</label>
+  <graphicData>
+    <texPath>Things/Projectile/Bullet_Small</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <projectile>
+    <damageDef>Flame</damageDef>
+    <damageAmountBase>7</damageAmountBase>
+    <speed>200</speed>
+  </projectile>
+</ThingDef>
+<ThingDef ParentName="BalancedBaseHumanMakeableGun">
+  <defName>Gun_Rush-B</defName>
+  <label>rush-B90</label>
+  <description>Что ебать ты просто чертовски говорила обо мне, маленькая сука? Я тебе зкажу, я закончил вершину моего класса в ВДВ, и я принимал участие в многочисленных секретных рейдов на Аль-Каидой, и у меня есть более 300 подтвержденных убийств. Я тренировался в парижском войны, и я сверху снайпер в целых российских вооруженных сил. Вы ничто для меня, но только другая цель. Я протрите тебе нахрен с точностью, подобных которым никогда не видели раньше на этой Земле, запомните мои чертовы слова. Вы думаете, что вы можете уйти с того, что дерьмо для меня через Интернет? Подумайте еще раз, ублюдок. Как мы говорим Я контактирую мой секретный сеть шпионов по всей России, и ваш IP-трассируется прямо сейчас, так что вам лучше подготовиться к шторму, козу. Шторм, который стирает жалкий небольшое вещь ты называеш твоя жизнь. Ты находишься чертовски мертвых, малыш. Я могу быть где угодно, в любое время, и я могу убить тебя в более семисот способами, и это только голыми руками. Я не только обучен приемам рукопашного боя, но у меня есть доступ ко всей арсенале Воздушно-десантные войска, и я буду использовать его в полной мере, чтобы вытереть задницу жалкий с лица континента, небольшое дерьма. Если бы только ты мог знать, что нечестивый возмездие ваш маленький "умный" комментарий был готов обрушить тебе, может быть, ты бы провели свой гребаный язык. Но ты не мог, ты не сделал, и теперь ты платишь цену, ты идиот проклятый. Я дерьмо ярость все над тобойи ты тонуть в нем. Ты находишься чертовски мертв, детка.</description>
+  <graphicData>
+    <texPath>rush-b90</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <soundInteract>Ingest_Beer</soundInteract>
+  <statBases>
+    <WorkToMake>420420</WorkToMake>
+    <Mass>1</Mass>
+    <AccuracyTouch>1</AccuracyTouch>
+    <AccuracyShort>0.1</AccuracyShort>
+    <AccuracyMedium>0.01</AccuracyMedium>
+    <AccuracyLong>0.001</AccuracyLong>
+    <RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
+  </statBases>
+  <costList>
+    <Steel>100</Steel>
+    <Component>10</Component>
+    <Beer>3</Beer>
+  </costList>
+  <recipeMaker>
+    <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
+  </recipeMaker>
+  <techLevel>Industrial</techLevel>
+  <weaponTags>
+    <li>GunHeavy</li>
+  </weaponTags>
+  <equippedStatOffsets>
+    <MoveSpeed>+150</MoveSpeed>
+  </equippedStatOffsets>
+  <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <projectileDef>Bullet_Rush-B</projectileDef>
+      <warmupTime>0.01</warmupTime>
+      <range>4</range>
+      <burstShotCount>100</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>ShotMinigun</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+  </verbs>
+</ThingDef>
+
 <ThingDefs>
