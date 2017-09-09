@@ -188,26 +188,27 @@
   </verbs>
 </ThingDef>
 
-<<<<<<< HEAD
+
   <!-- Du du - du du - du du -->
+
 
   <ThingDef ParentName="BalancedBaseBullet">
     <defName>Bullet_Sandstorm</defName>
-    <label>sandsturm bullet</label>
+    <label>sandstorm bullet</label>
     <graphicData>
       <texPath>Things/Projectile/sandstorm</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>7</damageAmountBase>
-      <speed>70</speed>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>10</speed>
     </projectile>
   </ThingDef>
 
   <ThingDef ParentName="BalancedBaseHumanMakeableGun">
     <defName>Gun_Sharknado</defName>
-    <label>Shark rifle</label>
+    <label>shark rifle</label>
     <description>He aim, he shoots, he scoooooores!</description>
     <graphicData>
       <texPath>Item/Equipment/WeaponRanged/sharkgun</texPath>
@@ -217,14 +218,14 @@
     <statBases>
       <WorkToMake>45000</WorkToMake>
       <Mass>3.5</Mass>
-      <AccuracyTouch>0.70</AccuracyTouch>
-      <AccuracyShort>0.87</AccuracyShort>
-      <AccuracyMedium>0.77</AccuracyMedium>
-      <AccuracyLong>0.64</AccuracyLong>
+      <AccuracyTouch>0.69</AccuracyTouch>
+      <AccuracyShort>0.69</AccuracyShort>
+      <AccuracyMedium>0.69</AccuracyMedium>
+      <AccuracyLong>0.69</AccuracyLong>
       <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>60</Steel>
+      <Steel>69</Steel>
       <TubeTelevision>1</TubeTelevision>
       <Component>7</Component>
     </costList>
@@ -236,10 +237,10 @@
         <warmupTime>0.5</warmupTime>
         <range>31</range>
         <burstShotCount>3</burstShotCount>
-        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
         <soundCast>ShotSharknado</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
+        <muzzleFlashScale>19</muzzleFlashScale>
       </li>
     </verbs>
     <weaponTags>
@@ -248,10 +249,9 @@
   </ThingDef>
 
 
-=======
-<!-- doomsday minigun -->
+  <!-- doomsday minigun -->
 
-  <ThingDef ParentName="BaseBullet">
+   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_DoomsdayMinigun</defName>
     <label>doomsday minigun bullet</label>
     <graphicData>
@@ -319,5 +319,4 @@
     </verbs>
   </ThingDef>
 
->>>>>>> f2459e295567ea4e86522f90bcdecbcf8039c193
-</ThingDefs>
+  </ThingDefs>
