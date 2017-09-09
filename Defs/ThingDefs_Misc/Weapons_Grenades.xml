@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+<!-- ==================== Frag grenade ========================== -->
+
+<ThingDef ParentName="BalancedBaseWeapon">
+  <defName>Weapon_SuicideFrags</defName>
+  <label>i'll think of a name later</label>
+  <description>New-fangled grenades of mutual mass destruction.</description>
+  <graphicData>
+    <texPath>Item/Equipment/WeaponRanged/gaynades</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <soundInteract>InteractGrenade</soundInteract>
+  <techLevel>Industrial</techLevel>
+  <equippedStatOffsets>
+    <WorkSpeedGlobal>10</WorkSpeedGlobal>
+    <MentalBreakThreshold>-5</MentalBreakThreshold>
+  </equippedStatOffsets>
+  <statBases>
+    <MarketValue>100</MarketValue>
+    <Mass>1</Mass>
+    <RangedWeapon_Cooldown>3.66</RangedWeapon_Cooldown>
+  </statBases>
+  <weaponTags>
+    <li>GrenadeDestructive</li>
+  </weaponTags>
+  <thingCategories>
+    <li>Grenades</li>
+  </thingCategories>
+  <verbs>
+    <li>
+      <label>pet kittens</label>
+      <verbClass>Verb_LaunchProjectile</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <range>2.9</range>
+      <forcedMissRadius>1.0</forcedMissRadius>
+      <warmupTime>0.5</warmupTime>
+      <noiseRadius>4</noiseRadius>
+      <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+      <soundCast>ThrowGrenade</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <projectileDef>Proj_Suicidenades</projectileDef>
+    </li>
+  </verbs>
+  <smeltProducts>
+    <Steel>100</Steel>
+  </smeltProducts>
+</ThingDef>
+
+<ThingDef ParentName="BalancedBaseGrenadeProjectile">
+  <defName>Proj_Suicidenades</defName>
+  <label>i'll think of a name laters</label>
+  <thingClass>Projectile_Explosive</thingClass>
+  <graphicData>
+    <texPath>Things/Projectile/Grenade</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <projectile>
+    <explosionRadius>9</explosionRadius >
+    <damageDef>Bomb</damageDef>
+    <damageAmountBase>400</damageAmountBase>
+    <explosionDelay>200</explosionDelay>
+  </projectile>
+</ThingDef>
+
+
+</ThingDefs>
