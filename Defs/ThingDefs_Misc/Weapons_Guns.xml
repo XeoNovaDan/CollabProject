@@ -188,4 +188,63 @@
   </verbs>
 </ThingDef>
 
+  <!-- Du du - du du - du du -->
+
+  <ThingDef ParentName="BalancedBaseBullet">
+    <defName>Bullet_Sandstorm</defName>
+    <label>sandsturm bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/sandstorm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>7</damageAmountBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BalancedBaseHumanMakeableGun">
+    <defName>Gun_Sharknado</defName>
+    <label>Shark rifle</label>
+    <description>He aim, he shoots, he scoooooores!</description>
+    <graphicData>
+      <texPath>Item/Equipment/WeaponRanged/sharkgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.77</AccuracyMedium>
+      <AccuracyLong>0.64</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <TubeTelevision>1</TubeTelevision>
+      <Component>7</Component>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Sandstorm</projectileDef>
+        <warmupTime>0.5</warmupTime>
+        <range>31</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ShotSharknado</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>EliteGun</li>
+    </weaponTags>
+  </ThingDef>
+
+
 </ThingDefs>
