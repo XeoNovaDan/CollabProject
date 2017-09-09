@@ -188,4 +188,74 @@
   </verbs>
 </ThingDef>
 
+<!-- doomsday minigun -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_DoomsdayMinigun</defName>
+    <label>doomsday minigun bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_DoomsdayRocket</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <explosionRadius>2.4</explosionRadius>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_DoomsdayMinigun</defName>
+    <label>doomsday minigun</label>
+    <description>A multi-barrel doomsday rocket launcher with an extremely high rate of fire. Demon-built.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>LetterArriveBadUrgent</soundInteract>
+    <statBases>
+      <WorkToMake>666666</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.2</AccuracyTouch>
+      <AccuracyShort>0.12</AccuracyShort>
+      <AccuracyMedium>0.06</AccuracyMedium>
+      <AccuracyLong>0.04</AccuracyLong>
+      <RangedWeapon_Cooldown>60</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Chicken_Meat>666</Chicken_Meat>
+      <Steel>160</Steel>
+      <Component>20</Component>
+    </costList>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_DoomsdayMinigun</projectileDef>
+        <forcedMissRadius>16</forcedMissRadius>
+        <warmupTime>0.8</warmupTime>
+        <range>32</range>
+        <burstShotCount>30</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
 </ThingDefs>
