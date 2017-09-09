@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
-	<!-- balanced bases -->
-
-  <ThingDef Name="BalancedBaseWeaponNeolithic" Abstract="True" ParentName="BalancedBaseWeapon">
-    <techLevel>Neolithic</techLevel>
-    <weaponTags>
-      <li>Neolithic</li>
-    </weaponTags>
-    <thingCategories>
-      <li>WeaponsRanged</li>
-    </thingCategories>
-    <comps>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
-    </comps>
-    <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <recipeUsers>
-        <li>ElectricSmithy</li>
-        <li>FueledSmithy</li>
-      </recipeUsers>
-      <effectWorking>Smelt</effectWorking>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
-  </ThingDef>
-
-  <ThingDef Name="BalancedBaseProjectileNeolithic" Abstract="True">
-    <category>Projectile</category>
-    <tickerType>Normal</tickerType>
-    <altitudeLayer>Projectile</altitudeLayer>
-    <thingClass>Bullet</thingClass>
-    <label>arrow</label>
-    <useHitPoints>False</useHitPoints>
-    <neverMultiSelect>True</neverMultiSelect>
-    <graphicData>
-      <shaderType>Transparent</shaderType>
-    </graphicData>
-  </ThingDef>
-
   <!-- balanced weapons -->
 
 	<ThingDef ParentName="BalancedBaseProjectileNeolithic">
