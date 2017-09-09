@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<!-- balanced bases -->
+
+  <ThingDef Name="BalancedBaseWeaponNeolithic" Abstract="True" ParentName="BalancedBaseWeapon">
+    <techLevel>Neolithic</techLevel>
+    <weaponTags>
+      <li>Neolithic</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <effectWorking>Smelt</effectWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="BalancedBaseProjectileNeolithic" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>arrow</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <!-- balanced weapons -->
+
+	<ThingDef ParentName="BalancedBaseProjectileNeolithic">
+		<defName>Projectile_ShortbowMkTwo</defName>
+		<label>shortbow mk.II arrow</label>
+		<graphicData>
+			<texPath>Things/Projectile/Arrow_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<explosionRadius>1.9</explosionRadius>
+      <speed>21</speed>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="BalancedBaseWeaponNeolithic">
+		<defName>Weapon_ShortbowMkTwo</defName>
+    <label>short bow mk.II</label>
+    <description>A revision of the venerable short bow design: capable of launching arrows with boomrat sacs attached to them, and significantly improved accuracy and rate of fire!\n\nGood luck with the abysmal projectile speed though...</description>
+    <graphicData>
+      <texPath>Item/Equipment/WeaponRanged/shortbowmk2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>BowSmall</soundInteract>
+    <costList>
+      <WoodLog>90</WoodLog>
+      <Plasteel>20</Plasteel>
+      <Component>20</Component>
+    </costList>
+    <statBases>
+      <WorkToMake>97000</WorkToMake>
+      <MarketValue>200</MarketValue>
+      <Mass>0.8</Mass>
+      <AccuracyTouch>0.33</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.07</AccuracyLong>
+      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>NeolithicRanged</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <ShootingAccuracy>2</ShootingAccuracy>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Projectile_ShortbowMkTwo</projectileDef>
+        <warmupTime>0.16</warmupTime>
+        <range>51</range>
+        <soundCast>Pawn_Boomrat_Wounded</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    </ThingDef>
+
+</ThingDefs>
