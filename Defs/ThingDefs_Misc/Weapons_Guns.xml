@@ -130,4 +130,62 @@
   </verbs>
 </ThingDef>
 
+<!-- Beer Gun -->
+
+<ThingDef ParentName="BalancedBaseBullet">
+  <defName>Bullet_BeerGun</defName>
+  <label>beer bottle</label>
+  <graphicData>
+    <texPath>things/item/drug/beer/Beer_a</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <projectile>
+    <damageDef>BeerBottle</damageDef>
+    <damageAmountBase>9</damageAmountBase>
+    <speed>55</speed>
+  </projectile>
+</ThingDef>
+<ThingDef ParentName="BalancedBaseHumanMakeableGun">
+  <defName>Gun_BeerGun</defName>
+  <label>beer gun</label>
+  <description>Innovating on the battlefield, the beer gun shoots beer bottles which magically inebriate whatever solid, biological creature it makes contact with.</description>
+  <graphicData>
+    <texPath>Item/Equipment/WeaponRanged/beergun</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <soundInteract>InteractRifle</soundInteract>
+  <statBases>
+    <WorkToMake>15000</WorkToMake>
+    <Mass>1.2</Mass>
+    <AccuracyTouch>0.91</AccuracyTouch>
+    <AccuracyShort>0.71</AccuracyShort>
+    <AccuracyMedium>0.5</AccuracyMedium>
+    <AccuracyLong>0.32</AccuracyLong>
+    <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+  </statBases>
+  <costList>
+    <Steel>30</Steel>
+    <Component>2</Component>
+    <Beer>5</Beer>
+  </costList>
+  <techLevel>Industrial</techLevel>
+  <generateCommonality>1.01</generateCommonality>
+  <equippedStatOffsets>
+    <MedicalSurgerySuccessChance>1</MedicalSurgerySuccessChance>
+    <GlobalLearningFactor>-0.99</GlobalLearningFactor>
+  </equippedStatOffsets>
+  <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <projectileDef>Bullet_BeerGun</projectileDef>
+      <warmupTime>0.3</warmupTime>
+      <range>24</range>
+      <soundCast>ShotPistol</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+  </verbs>
+</ThingDef>
+
 </ThingDefs>

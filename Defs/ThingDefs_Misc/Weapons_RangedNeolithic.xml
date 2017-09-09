@@ -16,39 +16,35 @@
 			<damageDef>Flame</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<explosionRadius>1.9</explosionRadius>
-      <speed>21</speed>
+      <speed>44</speed>
 		</projectile>
 	</ThingDef>
 	<ThingDef ParentName="BalancedBaseWeaponNeolithic">
 		<defName>Weapon_ShortbowMkTwo</defName>
     <label>short bow mk.II</label>
-    <description>A revision of the venerable short bow design: capable of launching arrows with boomrat sacs attached to them, and significantly improved accuracy and rate of fire!\n\nGood luck with the abysmal projectile speed though...</description>
+    <description>A revision of the venerable short bow design: capable of launching arrows with boomrat sacs attached to them! Aim high, and you might just hit that barn.</description>
     <graphicData>
       <texPath>Item/Equipment/WeaponRanged/shortbowmk2</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>BowSmall</soundInteract>
     <costList>
-      <WoodLog>90</WoodLog>
-      <Plasteel>20</Plasteel>
-      <Component>20</Component>
+      <WoodLog>30</WoodLog>
+      <Boomrat_Meat>20</Boomrat_Meat>
+      <Boomrat_Leather>20</Boomrat_Leather>
     </costList>
     <statBases>
-      <WorkToMake>97000</WorkToMake>
-      <MarketValue>200</MarketValue>
+      <WorkToMake>13500</WorkToMake>
       <Mass>0.8</Mass>
-      <AccuracyTouch>0.33</AccuracyTouch>
-      <AccuracyShort>0.7</AccuracyShort>
-      <AccuracyMedium>0.65</AccuracyMedium>
-      <AccuracyLong>0.07</AccuracyLong>
-      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+      <AccuracyTouch>0.89</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.41</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>NeolithicRanged</li>
     </weaponTags>
-    <equippedStatOffsets>
-      <ShootingAccuracy>2</ShootingAccuracy>
-    </equippedStatOffsets>
     <recipeMaker>
       <recipeUsers>
         <li>ElectricSmithy</li>
@@ -61,8 +57,8 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>Projectile_ShortbowMkTwo</projectileDef>
-        <warmupTime>0.16</warmupTime>
-        <range>51</range>
+        <warmupTime>1.35</warmupTime>
+        <range>29</range>
         <soundCast>Pawn_Boomrat_Wounded</soundCast>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
