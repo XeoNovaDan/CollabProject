@@ -23,7 +23,7 @@
   <label>mehni gun</label>
   <description>The best weapon in the game, just like every other weapon. Humanoid-built.</description>
   <graphicData>
-    <texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath>
+    <texPath>Things/Item/Equipment/WeaponRanged/Mehnigun</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
   <soundInteract>InteractRifle</soundInteract>
@@ -43,7 +43,7 @@
   <recipeMaker>
     <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
   </recipeMaker>
-  <techLevel>Industrial</techLevel>
+  <techLevel>Spacer</techLevel>
   <weaponTags>
     <li>GunHeavy</li>
   </weaponTags>
