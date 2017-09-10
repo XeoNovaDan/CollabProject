@@ -66,5 +66,67 @@
   </projectile>
 </ThingDef>
 
+<!-- To be a boomrat grenade -->
+
+
+  <!-- ==================== Molotov cocktail ========================== -->
+
+  <ThingDef ParentName="BalancedBaseWeapon">
+    <defName>Boomnades</defName>
+    <label>boomnades cocktails</label>
+    <description>A favorite weapon of hooligans and desperate warriors from rim to rim.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Molotov</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractMolotovCocktail</soundInteract>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <MarketValue>200</MarketValue>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>GrenadeDestructive</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li>
+        <label>throw molotov</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>12.9</range>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <soundCast>ThrowMolotovCocktail</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <projectileDef>Proj_Boomnades</projectileDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+	<ThingDef ParentName="BalancedBaseGrenadeProjectile">
+		<defName>Proj_Boomnades</defName>
+		<label>molotov cocktail</label>
+		<graphicData>
+			<texPath>Things/Projectile/Molotov</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+    <thingClass>Codename_Project_RIM.Boomrat_Grenade</thingClass>
+		<projectile>
+			<explosionRadius>1.1</explosionRadius>
+			<damageDef>Flame</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+
 
 </ThingDefs>
