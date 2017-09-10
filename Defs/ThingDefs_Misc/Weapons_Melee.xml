@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+	<ThingDef ParentName="BalancedBaseMeleeWeapon_Blunt">
+		<defName>MeleeWeapon_Banana</defName>
+		<label>banana</label>
+		<description>A long, yellow fruit chock full of potassium. Tastes good, hurts even better.</description>
+		<graphicData>
+			<texPath>Item/Equipment/WeaponMelee/banana</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>60</MarketValue>
+			<Beauty>1000</Beauty>
+			<DeteriorationRate>1000</DeteriorationRate>
+			<Mass>2</Mass>
+			<MeleeWeapon_DamageAmount>3</MeleeWeapon_DamageAmount>
+			<MeleeWeapon_Cooldown>0.17</MeleeWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<Beauty>10000</Beauty>
+			<Flammability>-1</Flammability>
+			<MoveSpeed>0.5</MoveSpeed>
+			<ImmunityGainSpeed>1</ImmunityGainSpeed>
+			<WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+			<TradePriceImprovement>0.1</TradePriceImprovement>
+			<MedicalSurgerySuccessChance>0.5</MedicalSurgerySuccessChance>
+			<MedicalTendQuality>0.5</MedicalTendQuality>
+		</equippedStatOffsets>
+		<equippedAngleOffset>15</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<meleeDamageDef>Blunt</meleeDamageDef>
+			</li>
+		</verbs>
+	</ThingDef>
+
+</ThingDefs>
