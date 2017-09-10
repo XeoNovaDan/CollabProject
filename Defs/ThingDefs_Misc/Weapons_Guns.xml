@@ -324,7 +324,7 @@
     <defName>Bullet_TripleDoomsdayRocket</defName>
     <label>doomsday rocket</label>
     <graphicData>
-      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <texPath>Things/Projectile/Grenade_Arrow</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
