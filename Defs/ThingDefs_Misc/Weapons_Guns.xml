@@ -23,7 +23,7 @@
   <label>mehni gun</label>
   <description>The best weapon in the game, just like every other weapon. Humanoid-built.</description>
   <graphicData>
-    <texPath>Things/Item/Equipment/WeaponRanged/Mehnigun</texPath>
+    <texPath>Item/Equipment/WeaponRanged/Mehnigun</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
   <soundInteract>InteractRifle</soundInteract>
@@ -252,7 +252,7 @@
 
   <!-- doomsday minigun -->
 
-   <ThingDef ParentName="BaseBullet">
+   <ThingDef ParentName="BalancedBaseBullet">
     <defName>Bullet_DoomsdayMinigun</defName>
     <label>doomsday minigun bullet</label>
     <graphicData>
@@ -268,7 +268,7 @@
       <speed>70</speed>
     </projectile>
   </ThingDef>
-  <ThingDef ParentName="BaseHumanMakeableGun">
+  <ThingDef ParentName="BalancedBaseHumanMakeableGun">
     <defName>Gun_DoomsdayMinigun</defName>
     <label>doomsday minigun</label>
     <description>A multi-barrel doomsday rocket launcher with an extremely high rate of fire. Demon-built.</description>
@@ -311,6 +311,78 @@
         <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
         <soundCast>InfernoCannon_Fire</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BalancedBaseBullet">
+    <defName>Bullet_TripleDoomsdayRocket</defName>
+    <label>doomsday rocket</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Codename_Project_RIM.Projectile_TripleDoomsdayRocket</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <explosionRadius>7.8</explosionRadius>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BalancedBaseGun">
+    <defName>Gun_TripleDoomsdayRocket</defName>
+    <label>triple doomsday rocket launcher</label>
+    <description>A single-use triple rocket launcher for certain retribution.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/DoomsdayLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>10000</MarketValue>
+      <Mass>8</Mass>
+      <AccuracyTouch>1.0</AccuracyTouch>
+      <AccuracyShort>1.0</AccuracyShort>
+      <AccuracyMedium>1.0</AccuracyMedium>
+      <AccuracyLong>1.0</AccuracyLong>
+      <RangedWeapon_Cooldown>5.5</RangedWeapon_Cooldown>
+    </statBases>
+    <!--<recipeMaker>
+      <researchPrerequisite>LargeRockets</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>170</Steel>
+      <Component>8</Component>
+      <MortarShell>1</MortarShell>
+    </costList>-->
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>true</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>Gun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_TripleDoomsdayRocket</projectileDef>
+        <forcedMissRadius>0.0</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
+        <range>40</range>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
         <onlyManualCast>true</onlyManualCast>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
