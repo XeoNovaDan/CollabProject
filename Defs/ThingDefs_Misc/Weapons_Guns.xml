@@ -39,6 +39,7 @@
   <costList>
     <Steel>160</Steel>
     <Component>20</Component>
+    <Plasteel>10</Plasteel>
   </costList>
   <recipeMaker>
     <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
