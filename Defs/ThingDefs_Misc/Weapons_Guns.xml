@@ -23,7 +23,7 @@
   <label>mehni gun</label>
   <description>The best weapon in the game, just like every other weapon. Humanoid-built.</description>
   <graphicData>
-    <texPath>Things/Item/Equipment/WeaponRanged/Mehnigun</texPath>
+    <texPath>Item/Equipment/WeaponRanged/Mehnigun</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
   <soundInteract>InteractRifle</soundInteract>
