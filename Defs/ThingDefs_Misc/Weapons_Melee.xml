@@ -9,14 +9,24 @@
 			<texPath>Item/Equipment/WeaponMelee/banana</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>15</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
 		<statBases>
 			<MarketValue>60</MarketValue>
 			<Beauty>1000</Beauty>
-			<DeteriorationRate>1000</DeteriorationRate>
+			<!--DeteriorationRate>1000</DeteriorationRate-->
 			<Mass>2</Mass>
 			<MeleeWeapon_DamageAmount>3</MeleeWeapon_DamageAmount>
 			<MeleeWeapon_Cooldown>0.17</MeleeWeapon_Cooldown>
 		</statBases>
+		<costList>
+			<ThrumboHorn>2</ThrumboHorn>
+		</costList>
 		<equippedStatOffsets>
 			<Beauty>10000</Beauty>
 			<Flammability>-1</Flammability>
