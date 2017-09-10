@@ -392,4 +392,58 @@
     </verbs>
   </ThingDef>
 
+  <ThingDef ParentName="BalancedBaseBullet">
+  	<defName>Bullet_Medigun</defName>
+  	<label>medicine</label>
+  	<graphicData>
+  		<texPath>Things/Item/Resource/MedicineGlitterworld</texPath>
+  		<graphicClass>Graphic_Single</graphicClass>
+  	</graphicData>
+  	<thingClass>Projectile_Explosive</thingClass>
+  	<projectile>
+  		<speed>40</speed>
+  		<damageDef>HealingBlast</damageDef>
+  		<damageAmountBase>1</damageAmountBase>
+  		<explosionRadius>1.9</explosionRadius>
+  	</projectile>
+  </ThingDef>
+  <ThingDef ParentName="BalancedBaseHumanMakeableGun">
+  	<defName>Weapon_Medigun</defName>
+  	<label>medigun</label>
+  	<description>Shoots magical medicine that dramatically accelerates one's healing rate. Not very accurate though</description>
+  	<graphicData>
+  		<texPath>Item/Equipment/WeaponRanged/Medigun</texPath>
+  		<graphicClass>Graphic_Single</graphicClass>
+  	</graphicData>
+  	<soundInteract>InteractRifle</soundInteract>
+  	<generateCommonality>0.1</generateCommonality>
+  	<statBases>
+  		<WorkToMake>22000</WorkToMake>
+  		<Mass>3.4</Mass>
+  		<AccuracyTouch>0.79</AccuracyTouch>
+  		<AccuracyShort>0.42</AccuracyShort>
+  		<AccuracyMedium>0.18</AccuracyMedium>
+  		<AccuracyLong>0.06</AccuracyLong>
+  		<RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+  	</statBases>
+  	<costList>
+  		<GlitterworldMedicine>10</GlitterworldMedicine>
+  		<Steel>75</Steel>
+  		<Component>10</Component>
+  	</costList>
+  	<verbs>
+  		<li>
+  			<verbClass>Verb_Shoot</verbClass>
+  			<hasStandardCommand>true</hasStandardCommand>
+  			<projectileDef>Bullet_Medigun</projectileDef>
+  			<warmupTime>3.0</warmupTime>
+  			<range>24</range>
+  			<forcedMissRadius>4.5</forcedMissRadius>
+  			<soundCast>ShotIncendiaryLauncher</soundCast>
+  			<soundCastTail>GunTail_Medium</soundCastTail>
+  			<muzzleFlashScale>14</muzzleFlashScale>
+  		</li>
+  	</verbs>
+  </ThingDef>
+
   </ThingDefs>
