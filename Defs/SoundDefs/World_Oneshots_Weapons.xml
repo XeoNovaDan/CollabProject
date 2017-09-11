@@ -10,7 +10,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/Sharknado</clipFolderPath>
+            <clipFolderPath>Weapon/sharknado</clipFolderPath>
           </li>
         </grains>
         <volumeRange>
