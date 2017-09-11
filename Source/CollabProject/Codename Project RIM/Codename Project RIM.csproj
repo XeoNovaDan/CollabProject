@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Boomrat_Grenade.cs" />
+    <Compile Include="ExplodingBullet.cs" />
     <Compile Include="Projectile_TripleDoomsdayRocket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
