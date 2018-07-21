@@ -46,12 +46,12 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>ThrumboCrackTolerance</hediffDef>
           <severity>0.040</severity>
-					<divideByBodySize>true</divideByBodySize>
+          <divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
-			<!-- <researchPrerequisite>PsychiteRefining</researchPrerequisite> -->
+      <!-- <researchPrerequisite>PsychiteRefining</researchPrerequisite> -->
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -72,8 +72,8 @@
           <min>0.75</min>
           <max>0.92</max>
         </overdoseSeverityOffset>
-				<!-- <largeOverdoseChance>0.01</largeOverdoseChance> -->
-			</li>
+        <!-- <largeOverdoseChance>0.01</largeOverdoseChance> -->
+      </li>
     </comps>
   </ThingDef>
 
@@ -91,34 +91,34 @@
         <severityPerDay>-0.033333</severityPerDay>
       </li>
     </comps>
-      <stages>
-        <li>
-          <!-- <painFactor>0.08</painFactor> -->
-          <painOffset>0.15</painOffset>
-          <hungerRateFactorOffset>3.5</hungerRateFactorOffset>
-          <capMods>
-            <li>
-              <capacity>Moving</capacity>
-              <offset>0.15</offset>
-            </li>
-          </capMods>
-          <hediffGivers>
-          	<li Class="HediffGiver_Random">
-	          	<hediff>ThrumboHornGrowth</hediff>
-	          	<mtbDays>120</mtbDays>
-	          	<partsToAffect>
-	          		<li>Head</li>
-	          	</partsToAffect>
-         	 </li>
-          </hediffGivers>
-          <statOffsets>
-          	<ArmorRating_Blunt>1.844</ArmorRating_Blunt>
-          	<ArmorRating_Sharp>1.844</ArmorRating_Sharp>
-          	<ArmorRating_Heat>1.844</ArmorRating_Heat>
-          	<GlobalLearningFactor>3</GlobalLearningFactor>
-          </statOffsets>
-        </li>
-      </stages>
+    <stages>
+      <li>
+        <!-- <painFactor>0.08</painFactor> -->
+        <painOffset>0.15</painOffset>
+        <hungerRateFactorOffset>3.5</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>ThrumboHornGrowth</hediff>
+            <mtbDays>120</mtbDays>
+            <partsToAffect>
+              <li>Head</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+        <statOffsets>
+          <ArmorRating_Blunt>1.844</ArmorRating_Blunt>
+          <ArmorRating_Sharp>1.844</ArmorRating_Sharp>
+          <ArmorRating_Heat>1.844</ArmorRating_Heat>
+          <GlobalLearningFactor>3</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </stages>
   </HediffDef>
 
   <ThoughtDef>
@@ -134,9 +134,9 @@
       </li>
     </stages>
   </ThoughtDef>
-  
+
   <!-- Psychite addiction -->
-  
+
   <ChemicalDef>
     <defName>ThrumboCrack</defName>
     <label>thrumbo crack</label>
@@ -154,7 +154,7 @@
       </li>
     </onGeneratedAddictedEvents> -->
   </ChemicalDef>
-  
+
   <NeedDef ParentName="DrugAddictionNeedBase">
     <defName>Chemical_ThrumboCrack</defName>
     <needClass>Need_Chemical</needClass>
@@ -174,7 +174,7 @@
         <chemical>ThrumboCrack</chemical>
       </li>
     </comps>
-		<!-- <hediffGivers>
+    <!-- <hediffGivers>
 			<li Class="HediffGiver_RandomDrugEffect">
 				<hediff>ChemicalDamageSevere</hediff>
 				<minSeverity>0.50</minSeverity>
@@ -186,7 +186,7 @@
 			</li>
 		</hediffGivers> -->
   </HediffDef>
-  
+
   <HediffDef ParentName="AddictionBase">
     <defName>ThrumboCrackAddiction</defName>
     <hediffClass>Hediff_Addiction</hediffClass>
@@ -195,6 +195,9 @@
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.0333</severityPerDay>
+      </li>
+      <li Class="Codename_Project_RIM.HediffCompProperties_ThrumboTransformer">
+        <mtbDaysTransformIntoThrumbo>60</mtbDaysTransformIntoThrumbo>
       </li>
     </comps>
     <stages>
@@ -214,19 +217,19 @@
             <offset>-0.1</offset>
           </li>
         </capMods>
-		<mentalStateGivers>
-			<li>
-				<mentalState>Berserk</mentalState>
-				<mtbDays>15</mtbDays>
-			</li>
-			<li>
-				<mentalState>Binging_Food</mentalState>
-				<mtbDays>5</mtbDays>
-			</li>
-		</mentalStateGivers>
-		<statOffsets>
-			<GlobalLearningFactor>-0.9</GlobalLearningFactor>
-		</statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>15</mtbDays>
+          </li>
+          <li>
+            <mentalState>Binging_Food</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <statOffsets>
+          <GlobalLearningFactor>-0.9</GlobalLearningFactor>
+        </statOffsets>
       </li>
     </stages>
   </HediffDef>
@@ -247,5 +250,5 @@
       </li>
     </stages>
   </ThoughtDef>
-  
+
 </Defs>

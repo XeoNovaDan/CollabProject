@@ -53,9 +53,13 @@
   <ItemGroup>
     <Compile Include="Boomrat_Grenade.cs" />
     <Compile Include="ExplodingBullet.cs" />
+    <Compile Include="HediffCompProperties_ThrumboTransformer.cs" />
+    <Compile Include="HediffCompThrumboTransformer.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="Projectile_TripleDoomsdayRocket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PR_HediffDefOf.cs" />
+    <Compile Include="ThrumboTransformerUtility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
