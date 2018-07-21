@@ -30,10 +30,10 @@
   <statBases>
     <WorkToMake>100000</WorkToMake>
     <Mass>10</Mass>
-    <AccuracyTouch>0.40</AccuracyTouch>
-    <AccuracyShort>0.32</AccuracyShort>
-    <AccuracyMedium>0.08</AccuracyMedium>
-    <AccuracyLong>0.01</AccuracyLong>
+    <AccuracyTouch>0.80</AccuracyTouch>
+    <AccuracyShort>0.82</AccuracyShort>
+    <AccuracyMedium>0.84</AccuracyMedium>
+    <AccuracyLong>0.86</AccuracyLong>
     <RangedWeapon_Cooldown>1.66</RangedWeapon_Cooldown>
   </statBases>
   <costList>
@@ -223,7 +223,7 @@
       <AccuracyShort>0.69</AccuracyShort>
       <AccuracyMedium>0.69</AccuracyMedium>
       <AccuracyLong>0.69</AccuracyLong>
-      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>0.60</RangedWeapon_Cooldown>
     </statBases>
     <costList>
       <Steel>69</Steel>
