@@ -13,7 +13,7 @@ namespace Codename_Project_RIM
             base.Tick();
             if (this.origin.x != this.Position.x || this.origin.z != this.Position.z)
             {
-                GenExplosion.DoExplosion(this.Position, base.Map, 0.2f, DamageDefOf.Flame, null, null, null, null, null, 0f, 1, false, null, 0f, 1);
+                GenExplosion.DoExplosion(Position, Map, 0.2f, DamageDefOf.Flame, null);
             }
         }
         void DoExplosion(Map map)
@@ -37,7 +37,9 @@ namespace Codename_Project_RIM
                     if (design[x, y] == 1)
                     {
                         IntVec3 newExplosion = new IntVec3(this.Position.x - y + 4, this.Position.y, this.Position.z - x + 4);
-                        GenExplosion.DoExplosion(newExplosion, map, 0.2f, DamageDefOf.Bomb, null, null, null, null, null, 0f, 1, false, null, 0f, 1);
+
+                        if (newExplosion.InBounds(map))
+                            GenExplosion.DoExplosion(newExplosion, map, 0.2f, DamageDefOf.Bomb, null);
                     }
 
                 }
@@ -59,7 +61,7 @@ namespace Codename_Project_RIM
             else
             {
                 DoExplosion(map);
-                SoundDefOf.BulletImpactGround.PlayOneShot(new TargetInfo(base.Position, map, false));
+                SoundDefOf.BulletImpact_Ground.PlayOneShot(new TargetInfo(base.Position, map, false));
                 MoteMaker.MakeStaticMote(this.ExactPosition, map, ThingDefOf.Mote_ShotHit_Dirt, 1f);
 
             }
