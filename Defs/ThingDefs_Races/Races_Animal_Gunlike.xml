@@ -54,7 +54,7 @@
 			<useMeatFrom>LabradorRetriever</useMeatFrom>
 			<gestationPeriodDays>22.5</gestationPeriodDays>
 			<nameOnTameChance>1</nameOnTameChance>
-			<trainableIntelligence>Advanced</trainableIntelligence>
+			<trainability>Advanced</trainability>
 			<wildness>0</wildness>
 			<nuzzleMtbHours>4</nuzzleMtbHours>
 			<litterSizeCurve>
@@ -81,13 +81,13 @@
 					<minAge>0.5</minAge>
 					<soundWounded>Pawn_Dog_Injured</soundWounded>
 					<soundDeath>Pawn_Dog_Death</soundDeath>
-					<soundCall>ShotShotgun</soundCall>
-					<soundAngry>ShotShotgun</soundAngry>
+					<soundCall>Shot_Shotgun</soundCall>
+					<soundAngry>Shot_Shotgun</soundAngry>
 				</li>
 			</lifeStageAges>
-			<soundMeleeHitPawn>ShotShotgun</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>ShotShotgun</soundMeleeHitBuilding>
-			<soundMeleeMiss>ShotShotgun</soundMeleeMiss>
+			<soundMeleeHitPawn>Shot_Shotgun</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Shot_Shotgun</soundMeleeHitBuilding>
+			<soundMeleeMiss>Shot_Shotgun</soundMeleeMiss>
 		</race>
 		<tradeTags>
 			<li>StandardAnimal</li>
@@ -148,7 +148,6 @@
 				</butcherBodyPart>
 			</li>
 		</lifeStages>
-		<wildSpawn_spawnWild>false</wildSpawn_spawnWild>
 	</PawnKindDef>
 
 </Defs>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <!-- balanced base of bases, the ace of base, first of its name, base of all that is balanced -->
 
@@ -33,66 +33,66 @@
   </ThingDef>
 
 
-  	<!-- balanced modern bases -->
+  <!-- balanced modern bases -->
 
-    <ThingDef Name="BalancedBaseGun" Abstract="True" ParentName="BalancedBaseWeapon">
-  		<techLevel>Industrial</techLevel>
-  		<smeltable>true</smeltable>
-  		<thingCategories>
-        <li>WeaponsRanged</li>
-      </thingCategories>
-      <inspectorTabs>
-        <li>ITab_Art</li>
-      </inspectorTabs>
-      <comps>
-        <li>
-          <compClass>CompQuality</compClass>
-        </li>
-        <li Class="CompProperties_Art">
-          <nameMaker>ArtName_WeaponGun</nameMaker>
-          <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
-          <minQualityForArtistic>Awful</minQualityForArtistic>
-        </li>
-      </comps>
-    </ThingDef>
+  <ThingDef Name="BalancedBaseGun" Abstract="True" ParentName="BalancedBaseWeapon">
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Awful</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
 
-    <ThingDef Name="BalancedBaseMakeableGun" ParentName="BalancedBaseGun" Abstract="True">
-      <recipeMaker>
-        <workSpeedStat>SmithingSpeed</workSpeedStat>
-        <workSkill>Crafting</workSkill>
-        <effectWorking>Smith</effectWorking>
-        <soundWorking>Recipe_Smith</soundWorking>
-        <recipeUsers>
-          <li>TableMachining</li>
-        </recipeUsers>
-        <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-      </recipeMaker>
-    </ThingDef>
+  <ThingDef Name="BalancedBaseMakeableGun" ParentName="BalancedBaseGun" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
 
-    <ThingDef Name="BalancedBaseHumanGun" ParentName="BalancedBaseGun" Abstract="True">
-      <weaponTags>
-        <li>Gun</li>
-      </weaponTags>
-    </ThingDef>
+  <ThingDef Name="BalancedBaseHumanGun" ParentName="BalancedBaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
 
-    <ThingDef Name="BalancedBaseHumanMakeableGun" ParentName="BalancedBaseMakeableGun" Abstract="True">
-      <weaponTags>
-        <li>Gun</li>
-      </weaponTags>
-    </ThingDef>
+  <ThingDef Name="BalancedBaseHumanMakeableGun" ParentName="BalancedBaseMakeableGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
 
-    <ThingDef Name="BalancedBaseBullet" Abstract="True">
-      <category>Projectile</category>
-      <tickerType>Normal</tickerType>
-      <altitudeLayer>Projectile</altitudeLayer>
-      <thingClass>Bullet</thingClass>
-      <label>bullet</label>
-      <useHitPoints>False</useHitPoints>
-      <neverMultiSelect>True</neverMultiSelect>
-      <graphicData>
-        <shaderType>Transparent</shaderType>
-      </graphicData>
-    </ThingDef>
+  <ThingDef Name="BalancedBaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
 
   <!-- balanced neolithic bases -->
 
@@ -121,7 +121,7 @@
     </recipeMaker>
   </ThingDef>
 
-    <!-- balanced neolithic projectile base -->
+  <!-- balanced neolithic projectile base -->
 
   <ThingDef Name="BalancedBaseProjectileNeolithic" Abstract="True">
     <category>Projectile</category>
@@ -138,7 +138,7 @@
 
   <!-- balanced grenade bases -->
 
- <ThingDef Name="BalancedBaseGrenadeProjectile" Abstract="True">
+  <ThingDef Name="BalancedBaseGrenadeProjectile" Abstract="True">
     <category>Projectile</category>
     <altitudeLayer>Projectile</altitudeLayer>
     <thingClass>Projectile_Explosive</thingClass>
@@ -153,11 +153,11 @@
       <speed>12</speed>
       <flyOverhead>false</flyOverhead>
     </projectile>
- </ThingDef>
+  </ThingDef>
 
- <!-- balanced melee bases -->
+  <!-- balanced melee bases -->
 
-   <ThingDef Name="BalancedBaseMeleeWeapon" Abstract="True" ParentName="BalancedBaseWeapon">
+  <ThingDef Name="BalancedBaseMeleeWeapon" Abstract="True" ParentName="BalancedBaseWeapon">
     <techLevel>Industrial</techLevel>
     <smeltable>true</smeltable>
     <weaponTags>
@@ -171,8 +171,8 @@
         <compClass>CompQuality</compClass>
       </li>
       <li Class="CompProperties_Art">
-        <nameMaker>ArtName_WeaponMelee</nameMaker>
-        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
         <minQualityForArtistic>Awful</minQualityForArtistic>
       </li>
     </comps>
@@ -192,33 +192,33 @@
     </inspectorTabs>
   </ThingDef>
 
-    <ThingDef Name="BalancedBaseMeleeWeapon_Sharp" ParentName="BalancedBaseMeleeWeapon" Abstract="True">
-    <recipeMaker>
-    <defaultIngredientFilter>
-      <categories>
-        <li>Root</li>
-      </categories>
-      <exceptedThingDefs>
-        <li>Silver</li>
-        <li>Gold</li>
-        <li>WoodLog</li>
-      </exceptedThingDefs>
-    </defaultIngredientFilter>
-    </recipeMaker>
-  </ThingDef>
-
-    <ThingDef Name="BalancedBaseMeleeWeapon_Blunt" ParentName="BalancedBaseMeleeWeapon" Abstract="True">
+  <ThingDef Name="BalancedBaseMeleeWeapon_Sharp" ParentName="BalancedBaseMeleeWeapon" Abstract="True">
     <recipeMaker>
       <defaultIngredientFilter>
         <categories>
           <li>Root</li>
         </categories>
-        <exceptedThingDefs>
+        <disallowedThingDefs>
           <li>Silver</li>
           <li>Gold</li>
-        </exceptedThingDefs>
+          <li>WoodLog</li>
+        </disallowedThingDefs>
       </defaultIngredientFilter>
     </recipeMaker>
   </ThingDef>
 
-</ThingDefs>
+  <ThingDef Name="BalancedBaseMeleeWeapon_Blunt" ParentName="BalancedBaseMeleeWeapon" Abstract="True">
+    <recipeMaker>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Silver</li>
+          <li>Gold</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

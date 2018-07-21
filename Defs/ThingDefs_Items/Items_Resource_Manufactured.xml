@@ -5,13 +5,12 @@
 		<defName>Bullet_MortarShellThrown</defName>
 		<label>mortar shell (thrown)</label>
 		<graphicData>
-			<texPath>Things/Item/Resource/Shell</texPath>
+			<texPath>Things/Item/Resource/Shell/Shell_HighExplosive</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
 			<damageDef>Bomb</damageDef>
-			<DamageAmountBase>50</DamageAmountBase>
 			<explosionRadius>3.5</explosionRadius>
 			<speed>8</speed>
 		</projectile>
@@ -23,7 +22,7 @@
 		<description>An explosive shell to be fired from mortars, or alternatively thrown by humans. Explodes when damaged.</description>
 		<equipmentType>Primary</equipmentType>
 		<graphicData>
-			<texPath>Things/Item/Resource/Shell</texPath>
+			<texPath>Things/Item/Resource/Shell/Shell_HighExplosive</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Metal_Drop</soundInteract>
@@ -41,8 +40,6 @@
 			<AccuracyMedium>0.22</AccuracyMedium>
 			<AccuracyLong>0.06</AccuracyLong>
 			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
-			<MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
-			<MeleeWeapon_Cooldown>2.5</MeleeWeapon_Cooldown>
 		</statBases>
 		<equippedStatOffsets>
 			<MoveSpeed>-1.5</MoveSpeed>
@@ -71,7 +68,7 @@
 			<li>
 				<verbClass>Verb_ShootOneUse</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<projectileDef>Bullet_MortarShellThrown</projectileDef>
+				<defaultProjectile>Bullet_MortarShellThrown</defaultProjectile>
 				<warmupTime>2.33</warmupTime>
 				<range>7.9</range>
 				<forcedMissRadius>2.4</forcedMissRadius>
@@ -81,12 +78,16 @@
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
 			</li>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>Blunt</meleeDamageDef>
-			</li>
 		</verbs>
+		<tools>
+			<li>
+				<power>9</power>
+				<cooldownTime>2.6</cooldownTime>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+			</li>
+		</tools>
 	</ThingDef>
 
 </Defs>

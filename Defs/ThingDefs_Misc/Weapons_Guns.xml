@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <!-- balanced weapons -->
 
@@ -26,7 +26,7 @@
     <texPath>Item/Equipment/WeaponRanged/Mehnigun</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
-  <soundInteract>InteractRifle</soundInteract>
+  <soundInteract>Interact_Rifle</soundInteract>
   <statBases>
     <WorkToMake>100000</WorkToMake>
     <Mass>10</Mass>
@@ -38,7 +38,7 @@
   </statBases>
   <costList>
     <Steel>160</Steel>
-    <Component>20</Component>
+    <ComponentIndustrial>20</ComponentIndustrial>
     <Plasteel>10</Plasteel>
   </costList>
   <recipeMaker>
@@ -55,12 +55,12 @@
     <li>
       <verbClass>Verb_Shoot</verbClass>
       <hasStandardCommand>true</hasStandardCommand>
-      <projectileDef>Bullet_Mehnigun</projectileDef>
+      <defaultProjectile>Bullet_Mehnigun</defaultProjectile>
       <warmupTime>3.0</warmupTime>
       <range>32</range>
       <burstShotCount>50</burstShotCount>
       <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-      <soundCast>ShotMinigun</soundCast>
+      <soundCast>Shot_Minigun</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </li>
@@ -90,7 +90,7 @@
     <texPath>Item/Equipment/WeaponRanged/rush-b90</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
-  <soundInteract>InteractRifle</soundInteract>
+  <soundInteract>Interact_Rifle</soundInteract>
   <statBases>
     <WorkToMake>420420</WorkToMake>
     <Mass>1</Mass>
@@ -102,7 +102,7 @@
   </statBases>
   <costList>
     <Steel>100</Steel>
-    <Component>10</Component>
+    <ComponentIndustrial>10</ComponentIndustrial>
     <Beer>3</Beer>
   </costList>
   <recipeMaker>
@@ -119,12 +119,12 @@
     <li>
       <verbClass>Verb_Shoot</verbClass>
       <hasStandardCommand>true</hasStandardCommand>
-      <projectileDef>Bullet_Rush-B</projectileDef>
+      <defaultProjectile>Bullet_Rush-B</defaultProjectile>
       <warmupTime>0.01</warmupTime>
       <range>4</range>
       <burstShotCount>100</burstShotCount>
       <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
-      <soundCast>ShotMinigun</soundCast>
+      <soundCast>Shot_Minigun</soundCast>
       <soundCastTail>GunTail_Light</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </li>
@@ -154,7 +154,7 @@
     <texPath>Item/Equipment/WeaponRanged/beergun</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
-  <soundInteract>InteractRifle</soundInteract>
+  <soundInteract>Interact_Rifle</soundInteract>
   <statBases>
     <WorkToMake>15000</WorkToMake>
     <Mass>1.2</Mass>
@@ -166,7 +166,7 @@
   </statBases>
   <costList>
     <Steel>30</Steel>
-    <Component>2</Component>
+    <ComponentIndustrial>2</ComponentIndustrial>
     <Beer>5</Beer>
   </costList>
   <techLevel>Industrial</techLevel>
@@ -179,10 +179,10 @@
     <li>
       <verbClass>Verb_Shoot</verbClass>
       <hasStandardCommand>true</hasStandardCommand>
-      <projectileDef>Bullet_BeerGun</projectileDef>
+      <defaultProjectile>Bullet_BeerGun</defaultProjectile>
       <warmupTime>0.3</warmupTime>
       <range>24</range>
-      <soundCast>ShotPistol</soundCast>
+      <soundCast>Shot_Autopistol</soundCast>
       <soundCastTail>GunTail_Light</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </li>
@@ -215,7 +215,7 @@
       <texPath>Item/Equipment/WeaponRanged/sharkgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
+    <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
       <WorkToMake>45000</WorkToMake>
       <Mass>3.5</Mass>
@@ -228,13 +228,13 @@
     <costList>
       <Steel>69</Steel>
       <TubeTelevision>1</TubeTelevision>
-      <Component>7</Component>
+      <ComponentIndustrial>7</ComponentIndustrial>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Sandstorm</projectileDef>
+        <defaultProjectile>Bullet_Sandstorm</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>31</range>
         <burstShotCount>3</burstShotCount>
@@ -276,7 +276,7 @@
       <texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>LetterArriveBadUrgent</soundInteract>
+    <soundInteract>LetterArrive_BadUrgent</soundInteract>
     <statBases>
       <WorkToMake>666666</WorkToMake>
       <Mass>10</Mass>
@@ -287,9 +287,9 @@
       <RangedWeapon_Cooldown>60</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Chicken_Meat>666</Chicken_Meat>
+      <Meat_Chicken>666</Meat_Chicken>
       <Steel>160</Steel>
-      <Component>20</Component>
+      <ComponentIndustrial>20</ComponentIndustrial>
     </costList>
     <techLevel>Medieval</techLevel>
     <weaponTags>
@@ -303,7 +303,7 @@
       <li>
         <verbClass>Verb_ShootOneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_DoomsdayMinigun</projectileDef>
+        <defaultProjectile>Bullet_DoomsdayMinigun</defaultProjectile>
         <forcedMissRadius>16</forcedMissRadius>
         <warmupTime>0.8</warmupTime>
         <range>32</range>
@@ -358,12 +358,10 @@
     </recipeMaker>
     <costList>
       <Steel>170</Steel>
-      <Component>8</Component>
+      <ComponentIndustrial>8</ComponentIndustrial>
       <MortarShell>1</MortarShell>
     </costList>-->
     <techLevel>Spacer</techLevel>
-    <destroyOnDrop>true</destroyOnDrop>
-    <menuHidden>True</menuHidden>
     <weaponTags>
       <li>Gun</li>
       <li>GunHeavy</li>
@@ -375,7 +373,7 @@
       <li>
         <verbClass>Verb_ShootOneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_TripleDoomsdayRocket</projectileDef>
+        <defaultProjectile>Bullet_TripleDoomsdayRocket</defaultProjectile>
         <forcedMissRadius>0.0</forcedMissRadius>
         <warmupTime>1.5</warmupTime>
         <ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
@@ -392,7 +390,7 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="BalancedBaseBullet">
+   <!-- <ThingDef ParentName="BalancedBaseBullet">
   	<defName>Bullet_Medigun</defName>
   	<label>medicine</label>
   	<graphicData>
@@ -415,7 +413,7 @@
   		<texPath>Item/Equipment/WeaponRanged/Medigun</texPath>
   		<graphicClass>Graphic_Single</graphicClass>
   	</graphicData>
-  	<soundInteract>InteractRifle</soundInteract>
+  	<soundInteract>Interact_Rifle</soundInteract>
   	<generateCommonality>0.1</generateCommonality>
   	<statBases>
   		<WorkToMake>22000</WorkToMake>
@@ -427,15 +425,15 @@
   		<RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
   	</statBases>
   	<costList>
-  		<GlitterworldMedicine>10</GlitterworldMedicine>
+  		<MedicineUltratech>10</MedicineUltratech>
   		<Steel>75</Steel>
-  		<Component>10</Component>
+  		<ComponentIndustrial>10</ComponentIndustrial>
   	</costList>
   	<verbs>
   		<li>
   			<verbClass>Verb_Shoot</verbClass>
   			<hasStandardCommand>true</hasStandardCommand>
-  			<projectileDef>Bullet_Medigun</projectileDef>
+  			<defaultProjectile>Bullet_Medigun</defaultProjectile>
   			<warmupTime>3.0</warmupTime>
   			<range>24</range>
   			<forcedMissRadius>4.5</forcedMissRadius>
@@ -444,6 +442,133 @@
   			<muzzleFlashScale>14</muzzleFlashScale>
   		</li>
   	</verbs>
+  </ThingDef> -->
+
+  <!-- derpvolver -->
+
+    <ThingDef ParentName="BalancedBaseBullet">
+    <defName>Bullet_Derpvolver</defName>
+    <label>derpvolver bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>44</damageAmountBase>
+      <speed>44</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BalancedBaseHumanMakeableGun">
+    <defName>Gun_Derpvolver</defName>
+    <label>derpvolver</label>
+    <description>A very western gun, innovating in cutting-edge design technology. Did I forget to mention that anybody would drop their panties at the sight of this?\n\n.44 4eva!!</description>
+    <graphicData>
+      <texPath>Item/Equipment/WeaponRanged/Derpvolver</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <statBases>
+      <WorkToMake>44444</WorkToMake>
+      <Mass>4.4</Mass>
+      <AccuracyTouch>0.44</AccuracyTouch>
+      <AccuracyShort>0.44</AccuracyShort>
+      <AccuracyMedium>0.44</AccuracyMedium>
+      <AccuracyLong>0.44</AccuracyLong>
+      <RangedWeapon_Cooldown>0.44</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedStatOffsets>
+      <ComfyTemperatureMin>4.4</ComfyTemperatureMin>
+      <ComfyTemperatureMax>44</ComfyTemperatureMax>
+      <ShootingAccuracyPawn>-44</ShootingAccuracyPawn>
+      <NegotiationAbility>1.5</NegotiationAbility>
+      <TradePriceImprovement>1.2</TradePriceImprovement>
+      <SocialImpact>4.4</SocialImpact>
+      <TameAnimalChance>1.44</TameAnimalChance>
+      <TrainAnimalChance>0.44</TrainAnimalChance>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>44</Steel>
+      <Leather_Human>25</Leather_Human>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Derpvolver</defaultProjectile>
+        <warmupTime>0.44</warmupTime>
+        <range>7.9</range>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>44</muzzleFlashScale>
+      </li>
+    </verbs>
   </ThingDef>
 
-  </ThingDefs>
+  <!-- super sniper -->
+
+  <ThingDef ParentName="BalancedBaseBullet">
+  <defName>Bullet_SuperSniper</defName>
+  <label>super sniper 'bullet'</label>
+  <graphicData>
+    <texPath>Things/Projectile/Bullet_Big</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <thingClass>Projectile_Explosive</thingClass>
+  <projectile>
+    <damageDef>Bomb</damageDef>
+    <damageAmountBase>200</damageAmountBase>
+    <explosionRadius>3.0</explosionRadius>
+    <speed>13</speed>
+  </projectile>
+</ThingDef>
+<ThingDef ParentName="BalancedBaseHumanMakeableGun">
+  <defName>Gun_SuperSniper</defName>
+  <label>super sniper</label>
+  <description>An ultra high-tech sniper rifle. Does half of an antigrain's worth of explosion damage, has a ridiculously long range but also takes half of an eternity to reload. Utilises LensFog™ technology to 'maximize' the shooter's accuracy.</description>
+  <graphicData>
+    <texPath>Item/Equipment/WeaponRanged/SuperSniper</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <soundInteract>Interact_Rifle</soundInteract>
+  <statBases>
+    <WorkToMake>55000</WorkToMake>
+    <Mass>4.0</Mass>
+    <AccuracyTouch>0.25</AccuracyTouch>
+    <AccuracyShort>0.43</AccuracyShort>
+    <AccuracyMedium>0.43</AccuracyMedium>
+    <AccuracyLong>0.44</AccuracyLong>
+    <RangedWeapon_Cooldown>60</RangedWeapon_Cooldown>
+  </statBases>
+  <costList>
+    <Plasteel>60</Plasteel>
+    <ComponentSpacer>8</ComponentSpacer>
+  </costList>
+  <recipeMaker>
+    <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
+  </recipeMaker>
+  <techLevel>Spacer</techLevel>
+  <weaponTags>
+    <li>GunHeavy</li>
+  </weaponTags>
+  <equippedStatOffsets>
+    <MoveSpeed>+2.5</MoveSpeed>
+    <ShootingAccuracyPawn>-60</ShootingAccuracyPawn>
+  </equippedStatOffsets>
+  <ignoreConfigErrors>true</ignoreConfigErrors>
+  <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_SuperSniper</defaultProjectile>
+      <warmupTime>4</warmupTime>
+      <range>100.1</range>
+      <soundCast>Shot_Minigun</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+  </verbs>
+</ThingDef>
+
+  </Defs>

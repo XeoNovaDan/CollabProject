@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ThingDefs>
+<Defs>
 
 	<ThingDef ParentName="BalancedBaseMeleeWeapon_Blunt">
 		<defName>MeleeWeapon_Banana</defName>
@@ -21,8 +21,6 @@
 			<Beauty>1000</Beauty>
 			<!--DeteriorationRate>1000</DeteriorationRate-->
 			<Mass>2</Mass>
-			<MeleeWeapon_DamageAmount>3</MeleeWeapon_DamageAmount>
-			<MeleeWeapon_Cooldown>0.17</MeleeWeapon_Cooldown>
 		</statBases>
 		<costList>
 			<ThrumboHorn>2</ThrumboHorn>
@@ -38,55 +36,77 @@
 			<MedicalTendQuality>0.5</MedicalTendQuality>
 		</equippedStatOffsets>
 		<equippedAngleOffset>15</equippedAngleOffset>
-		<verbs>
+		<tools>
 			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>Blunt</meleeDamageDef>
+				<chanceFactor>12</chanceFactor>
+				<power>3</power>
+				<cooldownTime>0.17</cooldownTime>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
 			</li>
-		</verbs>
+		</tools>
 	</ThingDef>
 
 	<ThingDef ParentName="BalancedBaseMeleeWeapon_Sharp">
-    <defName>MeleeWeapon_ClubSword</defName>
-    <label>clubsword</label>
-    <description>Somebody thought that putting a club in place of a longsword's blade was a good idea... turns out that it was!</description>
-    <graphicData>
-      <texPath>Item/Equipment/WeaponMelee/ClubSword</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <techLevel>Neolithic</techLevel>
+		<defName>MeleeWeapon_ClubSword</defName>
+		<label>clubsword</label>
+		<description>Somebody thought that putting a club in place of a longsword's blade was a good idea... turns out that it was!</description>
+		<graphicData>
+			<texPath>Item/Equipment/WeaponMelee/ClubSword</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Neolithic</techLevel>
 		<weaponTags>
 			<li>Neolithic</li>
 			<li>NeolithicMelee</li>
 		</weaponTags>
-    <costStuffCount>120</costStuffCount>
-    <statBases>
-      <WorkToMake>22000</WorkToMake>
-      <Mass>1.6</Mass>
-      <MeleeWeapon_DamageAmount>17</MeleeWeapon_DamageAmount>
-      <MeleeWeapon_Cooldown>2.5</MeleeWeapon_Cooldown>
-    </statBases>
-    <equippedAngleOffset>-65</equippedAngleOffset>
-    <stuffCategories>
-    	<li>Stony</li>
-      <li>Metallic</li>
-      <li>Woody</li>
-    </stuffCategories>
-    <recipeMaker>
+		<costStuffCount>120</costStuffCount>
+		<statBases>
+			<WorkToMake>22000</WorkToMake>
+			<Mass>1.6</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<stuffCategories>
+			<li>Stony</li>
+			<li>Metallic</li>
+			<li>Woody</li>
+		</stuffCategories>
+		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricSmithy</li>
 				<li>FueledSmithy</li>
 				<li>CraftingSpot</li>
 			</recipeUsers>
 		</recipeMaker>
-    <verbs>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <meleeDamageDef>BluntCut</meleeDamageDef>
-      </li>
-    </verbs>
-  </ThingDef>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+					<li>Poke</li>
+				</capacities>
+				<power>23</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Cut</li>
+				</capacities>
+				<power>23</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
 
-</ThingDefs>
+</Defs>

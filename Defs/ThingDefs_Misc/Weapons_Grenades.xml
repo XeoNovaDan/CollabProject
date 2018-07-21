@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 <!-- ==================== Frag grenade ========================== -->
 
@@ -11,7 +11,7 @@
     <texPath>Item/Equipment/WeaponRanged/gaynades</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
-  <soundInteract>InteractGrenade</soundInteract>
+  <soundInteract>Interact_Grenade</soundInteract>
   <techLevel>Industrial</techLevel>
   <equippedStatOffsets>
     <WorkSpeedGlobal>10</WorkSpeedGlobal>
@@ -42,7 +42,7 @@
       <targetParams>
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
-      <projectileDef>Proj_Suicidenades</projectileDef>
+      <defaultProjectile>Proj_Suicidenades</defaultProjectile>
     </li>
   </verbs>
   <smeltProducts>
@@ -73,19 +73,20 @@
 
   <ThingDef ParentName="BalancedBaseWeapon">
     <defName>Boomnades</defName>
-    <label>boomnades cocktails</label>
+    <label>boomnades</label>
     <description>A favorite weapon of hooligans and desperate warriors from rim to rim.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Molotov</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractMolotovCocktail</soundInteract>
+    <soundInteract>Interact_MolotovCocktail</soundInteract>
     <techLevel>Industrial</techLevel>
     <statBases>
       <MarketValue>200</MarketValue>
       <Mass>1</Mass>
       <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
     </statBases>
+    <ignoreConfigErrors>true</ignoreConfigErrors>
     <weaponTags>
       <li>GrenadeDestructive</li>
     </weaponTags>
@@ -98,23 +99,22 @@
         <verbClass>Verb_LaunchProjectile</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <range>12.9</range>
-        <forcedMissRadius>2.9</forcedMissRadius>
+        <forcedMissRadius>1.9</forcedMissRadius>
         <warmupTime>1.5</warmupTime>
         <noiseRadius>4</noiseRadius>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-        <ai_IsIncendiary>true</ai_IsIncendiary>
         <soundCast>ThrowMolotovCocktail</soundCast>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
-        <projectileDef>Proj_Boomnades</projectileDef>
+        <defaultProjectile>Proj_Boomnades</defaultProjectile>
       </li>
     </verbs>
   </ThingDef>
 
 	<ThingDef ParentName="BalancedBaseGrenadeProjectile">
 		<defName>Proj_Boomnades</defName>
-		<label>molotov cocktail</label>
+		<label>boomnade</label>
 		<graphicData>
 			<texPath>Things/Projectile/Molotov</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -124,9 +124,9 @@
 			<explosionRadius>1.1</explosionRadius>
 			<damageDef>Flame</damageDef>
 			<damageAmountBase>10</damageAmountBase>
-			<preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
+			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
 
 
-</ThingDefs>
+</Defs>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <!-- balanced weapons -->
 
@@ -27,11 +27,11 @@
       <texPath>Item/Equipment/WeaponRanged/shortbowmk2</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>BowSmall</soundInteract>
+    <soundInteract>Bow_Small</soundInteract>
     <costList>
       <WoodLog>30</WoodLog>
-      <Boomrat_Meat>20</Boomrat_Meat>
-      <Boomrat_Leather>20</Boomrat_Leather>
+      <Meat_Boomrat>20</Meat_Boomrat>
+      <Leather_Light>20</Leather_Light>
     </costList>
     <statBases>
       <WorkToMake>13500</WorkToMake>
@@ -52,11 +52,12 @@
         <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
+    <ignoreConfigErrors>true</ignoreConfigErrors>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Projectile_ShortbowMkTwo</projectileDef>
+        <defaultProjectile>Projectile_ShortbowMkTwo</defaultProjectile>
         <warmupTime>1.35</warmupTime>
         <range>29</range>
         <soundCast>Pawn_Boomrat_Wounded</soundCast>
@@ -67,4 +68,4 @@
     </verbs>
     </ThingDef>
 
-</ThingDefs>
+</Defs>
