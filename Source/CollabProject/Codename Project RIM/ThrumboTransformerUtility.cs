@@ -30,6 +30,49 @@ namespace Codename_Project_RIM
             return hediff.def != PR_HediffDefOf.ThrumboHornGrowth && hediff.def != PR_HediffDefOf.ThrumboCrackAddiction && !(hediff is Hediff_AddedPart) && !(hediff is Hediff_Implant);
         }
 
+        public static bool TryGivePostTransformationBondRelation(ref Pawn thrumbo, Pawn pawn, out Pawn otherPawn)
+        {
+            otherPawn = null;
+
+            // Queries, woo!
+            int minimumOpinion = Pawn_RelationsTracker.FriendOpinionThreshold;
+            Func<Pawn, bool> query = (Pawn oP) => pawn.relations.OpinionOf(oP) >= minimumOpinion && oP.relations.OpinionOf(pawn) >= minimumOpinion;
+            List<Pawn> acceptablePlayerPawns = pawn.Map.mapPawns.FreeColonists.Where(query).ToList();
+
+            if (!acceptablePlayerPawns.NullOrEmpty())
+            {
+                Dictionary<int, Pawn> candidatePairs = CandidateScorePairs(pawn, acceptablePlayerPawns);
+                otherPawn = candidatePairs[candidatePairs.Keys.ToList().Max()];
+                thrumbo.relations.AddDirectRelation(PawnRelationDefOf.Bond, otherPawn);
+                for (int i = 0; i < otherPawn.relations.DirectRelations.Count; i++)
+                {
+                    DirectPawnRelation relation = otherPawn.relations.DirectRelations[i];
+                    if (relation.otherPawn == pawn)
+                        otherPawn.relations.RemoveDirectRelation(relation);
+                }
+                otherPawn.relations.AddDirectRelation(PawnRelationDefOf.Bond, thrumbo);
+            }
+
+            return otherPawn != null;
+        }
+
+        public static Dictionary<int, Pawn> CandidateScorePairs (Pawn pawn, List<Pawn> candidateList)
+        {
+            Dictionary<int, Pawn> pairs = new Dictionary<int, Pawn>();
+
+            for (int i = 0; i < candidateList.Count; i++)
+            {
+                Pawn candidate = candidateList[i];
+                PawnRelationDef relation = pawn.GetMostImportantRelation(candidate);
+                int pawnOpinionOfCandidate = pawn.relations.OpinionOf(candidate);
+                int candidateOpinionOfPawn = candidate.relations.OpinionOf(pawn);
+                int score = Mathf.RoundToInt(relation.importance + pawnOpinionOfCandidate + candidateOpinionOfPawn);
+                pairs.Add(score, candidate);
+            }
+
+            return pairs;
+        }
+
     }
 
 }

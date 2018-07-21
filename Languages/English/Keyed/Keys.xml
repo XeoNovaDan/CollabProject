@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+
+    <!-- Thrumbo crack letter -->
+    <LetterThrumboCrackTransformationLabel>Thrumbo transformation</LetterThrumboCrackTransformationLabel>
+    <LetterThrumboCrackTransformation>{0} has transformed into a manhunting thrumbo due to {1} thrumbo crack withdrawal!</LetterThrumboCrackTransformation>
+    <TransformedThrumboBonded>{0} has a bond with {1} due to their strong relationship.</TransformedThrumboBonded>
+
+    <!-- Dakka mote thrower -->
     <Dakka>Dakka</Dakka>
+
 </LanguageData>

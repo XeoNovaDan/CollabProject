@@ -45,11 +45,21 @@ namespace Codename_Project_RIM
                 // Transfer hediffs from colonists to thrumbo where possible
                 ThrumboTransformerUtility.TryTransferHediffs(Pawn, ref newThrumbo);
 
+                // Try to bond with another colonist + set up letter text
+                string thrumboTransformLetterLabel = "LetterThrumboCrackTransformationLabel".Translate();
+                string thrumboTransformLetter = "LetterThrumboCrackTransformation".Translate(new object[] { Pawn.Label, Pawn.gender.GetPossessive() });
+                if (ThrumboTransformerUtility.TryGivePostTransformationBondRelation(ref newThrumbo, Pawn, out Pawn otherPawn))
+                {
+                    thrumboTransformLetterLabel += " " + "BondBrackets".Translate();
+                    thrumboTransformLetter += "\n\n" + "TransformedThrumboBonded".Translate(new object[] { Pawn.gender.GetPronoun().CapitalizeFirst(), otherPawn.LabelShort });
+                }
+
                 // Spawn thrumbo and remove pawn
                 Pawn thrumbo = (Pawn)GenSpawn.Spawn(newThrumbo, Pawn.PositionHeld, Pawn.MapHeld);
                 thrumbo.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, forceWake: true, transitionSilently: true);
-                Find.LetterStack.ReceiveLetter("LetterThrumboCrackTransformationLabel".Translate(), "LetterThrumboCrackTransformation".Translate(Pawn.Label), LetterDefOf.ThreatSmall);
+                Find.LetterStack.ReceiveLetter(thrumboTransformLetterLabel, thrumboTransformLetter, LetterDefOf.ThreatSmall);
                 Pawn.Destroy();
+                Find.TickManager.slower.SignalForceNormalSpeedShort();
             }
         }
 
