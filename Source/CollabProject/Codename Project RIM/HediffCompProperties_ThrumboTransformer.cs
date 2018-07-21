@@ -19,5 +19,9 @@ namespace Codename_Project_RIM
 
         public float mtbDaysTransformIntoThrumbo = 0f;
 
+        public Dictionary<BodyPartDef, BodyPartDef> partConversionsByDefNames;
+
+        public Dictionary<string, string> partConversionsByCustomLabels;
+
     }
 }

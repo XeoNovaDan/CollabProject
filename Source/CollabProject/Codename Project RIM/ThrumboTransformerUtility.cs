@@ -12,7 +12,7 @@ namespace Codename_Project_RIM
     public static class ThrumboTransformerUtility
     {
 
-        public static void TryTransferHediffs(Pawn fromPawn, ref Pawn toPawn)
+        public static void TryTransferHediffs(Pawn fromPawn, ref Pawn toPawn, HediffCompProperties_ThrumboTransformer props)
         {
             List<Hediff> pawnHediffs = fromPawn.health.hediffSet.GetHediffs<Hediff>().ToList();
             if (!pawnHediffs.NullOrEmpty())
@@ -20,7 +20,17 @@ namespace Codename_Project_RIM
                 foreach (Hediff hediff in pawnHediffs)
                 {
                     if (hediff.CanBeAddedToThrumbo())
-                        toPawn.health.AddHediff(hediff);
+                    {
+                        BodyPartRecord part = hediff.Part;
+                        part.body = BodyDefOf.Human;
+                        if (props.partConversionsByDefNames.Keys.Contains(part.def))
+                            part.def = props.partConversionsByDefNames[part.def];
+                        if (props.partConversionsByCustomLabels.Keys.Contains(part.customLabel))
+                            part.customLabel = props.partConversionsByCustomLabels[part.customLabel];
+                        // Whole-body hediffs get an automatic pass
+                        if (hediff.Part.def == null || part.def != null)
+                            toPawn.health.AddHediff(hediff, part);
+                    }
                 }
             }
         }

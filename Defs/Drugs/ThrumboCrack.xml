@@ -197,7 +197,19 @@
         <severityPerDay>-0.0333</severityPerDay>
       </li>
       <li Class="Codename_Project_RIM.HediffCompProperties_ThrumboTransformer">
-        <mtbDaysTransformIntoThrumbo>60</mtbDaysTransformIntoThrumbo>
+        <mtbDaysTransformIntoThrumbo>30</mtbDaysTransformIntoThrumbo>
+        <!-- Nulls are intentional in this block -->
+        <partConversionsByDefNames>
+          <li><key>Torso</key><value>Body</value></li>
+          <li><key>Ribcage</key><value></value></li>
+          <li><key>Pelvis</key><value></value></li>
+          <li><key>Ribcage</key><value></value></li>
+          <li><key>Foot</key><value>Hoof</value></li>
+        </partConversionsByDefNames>
+        <partConversionsByCustomLabels>
+          <li><key>left arm</key><value>front left leg</value></li>
+          <li><key>left foot</key><value>front left hoof</value></li>
+        </partConversionsByCustomLabels>
       </li>
     </comps>
     <stages>
