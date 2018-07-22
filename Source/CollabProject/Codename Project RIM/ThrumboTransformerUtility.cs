@@ -12,28 +12,28 @@ namespace Codename_Project_RIM
     public static class ThrumboTransformerUtility
     {
 
-        public static void TryTransferHediffs(Pawn fromPawn, ref Pawn toPawn, HediffCompProperties_ThrumboTransformer props)
-        {
-            List<Hediff> pawnHediffs = fromPawn.health.hediffSet.GetHediffs<Hediff>().ToList();
-            if (!pawnHediffs.NullOrEmpty())
-            {
-                foreach (Hediff hediff in pawnHediffs)
-                {
-                    if (hediff.CanBeAddedToThrumbo())
-                    {
-                        BodyPartRecord part = hediff.Part;
-                        part.body = BodyDefOf.Human;
-                        if (props.partConversionsByDefNames.Keys.Contains(part.def))
-                            part.def = props.partConversionsByDefNames[part.def];
-                        if (props.partConversionsByCustomLabels.Keys.Contains(part.customLabel))
-                            part.customLabel = props.partConversionsByCustomLabels[part.customLabel];
-                        // Whole-body hediffs get an automatic pass
-                        if (hediff.Part.def == null || part.def != null)
-                            toPawn.health.AddHediff(hediff, part);
-                    }
-                }
-            }
-        }
+        // Not entirely sure how to get this working; def and custom label are apparently null regardless, and it tries to add a missing body part record regardless
+        //public static void TryTransferHediffs(Pawn fromPawn, ref Pawn toPawn, HediffCompProperties_ThrumboTransformer props)
+        //{
+        //    List<Hediff> pawnHediffs = fromPawn.health.hediffSet.GetHediffs<Hediff>().ToList();
+        //    if (!pawnHediffs.NullOrEmpty())
+        //    {
+        //        foreach (Hediff hediff in pawnHediffs)
+        //        {
+        //            if (hediff.CanBeAddedToThrumbo())
+        //            {
+        //                BodyPartRecord part = hediff.Part;
+        //                part.body = PR_BodyDefOf.QuadrupedAnimalWithHoovesAndHorn;
+        //                if (part.def != null && props.partConversionsByDefNames.ContainsKey(part.def))
+        //                    part.def = props.partConversionsByDefNames[part.def];
+        //                if (part.customLabel != null && props.partConversionsByCustomLabels.ContainsKey(part.customLabel))
+        //                    part.customLabel = props.partConversionsByCustomLabels[part.customLabel];
+        //                if (!props.partConversionBlacklist.Contains(part.def))
+        //                    toPawn.health.AddHediff(hediff, part);
+        //            }
+        //        }
+        //    }
+        //}
 
         public static bool CanBeAddedToThrumbo(this Hediff hediff)
         {
@@ -60,7 +60,7 @@ namespace Codename_Project_RIM
                     if (relation.otherPawn == pawn)
                         otherPawn.relations.RemoveDirectRelation(relation);
                 }
-                otherPawn.relations.AddDirectRelation(PawnRelationDefOf.Bond, thrumbo);
+                //otherPawn.relations.AddDirectRelation(PawnRelationDefOf.Bond, thrumbo);
             }
 
             return otherPawn != null;

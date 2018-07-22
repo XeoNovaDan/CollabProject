@@ -12,7 +12,7 @@ namespace Codename_Project_RIM
     public static class PR_BodyDefOf
     {
 
-        public static BodyDef QuadrupedAnimalWithHooves;
+        public static BodyDef QuadrupedAnimalWithHoovesAndHorn;
 
     }
 }

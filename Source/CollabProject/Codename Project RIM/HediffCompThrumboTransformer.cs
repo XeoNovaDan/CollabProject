@@ -42,8 +42,8 @@ namespace Codename_Project_RIM
                 // Name thrumbo
                 newThrumbo.Name = Pawn.Name;
 
-                // Transfer hediffs from colonists to thrumbo where possible
-                ThrumboTransformerUtility.TryTransferHediffs(Pawn, ref newThrumbo, Props);
+                // Transfer hediffs from colonists to thrumbo where possible - NOT WORKING
+                //ThrumboTransformerUtility.TryTransferHediffs(Pawn, ref newThrumbo, Props);
 
                 // Try to bond with another colonist + set up letter text
                 string thrumboTransformLetterLabel = "LetterThrumboCrackTransformationLabel".Translate();

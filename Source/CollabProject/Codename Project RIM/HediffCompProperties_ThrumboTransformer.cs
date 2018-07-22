@@ -23,5 +23,7 @@ namespace Codename_Project_RIM
 
         public Dictionary<string, string> partConversionsByCustomLabels;
 
+        public List<BodyPartDef> partConversionBlacklist;
+
     }
 }

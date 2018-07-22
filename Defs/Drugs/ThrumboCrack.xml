@@ -198,18 +198,36 @@
       </li>
       <li Class="Codename_Project_RIM.HediffCompProperties_ThrumboTransformer">
         <mtbDaysTransformIntoThrumbo>30</mtbDaysTransformIntoThrumbo>
-        <!-- Nulls are intentional in this block -->
-        <partConversionsByDefNames>
+        <!-- Hediff transferring feature's currently not functional -->
+        <!-- <partConversionsByDefNames>
+          <li><key>Jaw</key><value>AnimalJaw</value></li>
           <li><key>Torso</key><value>Body</value></li>
-          <li><key>Ribcage</key><value></value></li>
-          <li><key>Pelvis</key><value></value></li>
-          <li><key>Ribcage</key><value></value></li>
           <li><key>Foot</key><value>Hoof</value></li>
+          <li><key>Hand</key><value>Hoof</value></li>
         </partConversionsByDefNames>
         <partConversionsByCustomLabels>
           <li><key>left arm</key><value>front left leg</value></li>
-          <li><key>left foot</key><value>front left hoof</value></li>
+          <li><key>left hand</key><value>front left hoof</value></li>
+          <li><key>right arm</key><value>front right leg</value></li>
+          <li><key>right hand</key><value>front right hoof</value></li>
+          <li><key>left leg</key><value>rear left leg</value></li>
+          <li><key>left foot</key><value>rear left hoof</value></li>
+          <li><key>right leg</key><value>rear right leg</value></li>
+          <li><key>right foot</key><value>rear right hoof</value></li>
         </partConversionsByCustomLabels>
+        <partConversionBlacklist>
+          <li>Shoulder</li>
+          <li>Clavicle</li>
+          <li>Humerus</li>
+          <li>Radius</li>
+          <li>Ribcage</li>
+          <li>Waist</li>
+          <li>Pelvis</li>
+          <li>Femur</li>
+          <li>Tibia</li>
+          <li>Toe</li>
+          <li>Finger</li>
+        </partConversionBlacklist> -->
       </li>
     </comps>
     <stages>
