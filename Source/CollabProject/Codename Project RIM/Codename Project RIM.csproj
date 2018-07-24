@@ -51,16 +51,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Boomrat_Grenade.cs" />
-    <Compile Include="ExplodingBullet.cs" />
-    <Compile Include="HediffCompProperties_ThrumboTransformer.cs" />
-    <Compile Include="HediffCompThrumboTransformer.cs" />
-    <Compile Include="HarmonyPatches.cs" />
-    <Compile Include="Projectile_TripleDoomsdayRocket.cs" />
+    <Compile Include="Classes\Comps\Thing\CompShipAttractor.cs" />
+    <Compile Include="Classes\Comps\Thing\CompProperties_ShipAttractor.cs" />
+    <Compile Include="Classes\Projectiles\Boomrat_Grenade.cs" />
+    <Compile Include="Classes\Projectiles\ExplodingBullet.cs" />
+    <Compile Include="Classes\Comps\Hediff\HediffCompProperties_ThrumboTransformer.cs" />
+    <Compile Include="Classes\Comps\Hediff\HediffCompThrumboTransformer.cs" />
+    <Compile Include="Classes\HarmonyPatches.cs" />
+    <Compile Include="Classes\Projectiles\Projectile_TripleDoomsdayRocket.cs" />
+    <None Include="NewCS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PR_BodyDefOf.cs" />
-    <Compile Include="PR_HediffDefOf.cs" />
-    <Compile Include="ThrumboTransformerUtility.cs" />
+    <Compile Include="Classes\StaticClasses\DefOf\PR_BodyDefOf.cs" />
+    <Compile Include="Classes\StaticClasses\DefOf\PR_HediffDefOf.cs" />
+    <Compile Include="Classes\StaticClasses\Utilities\ThrumboTransformerUtility.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
