@@ -5,7 +5,7 @@
     <defName>GiantShipMagnet</defName>
     <label>giant ship magnet</label>
     <graphicData>
-      <texPath>Things/Building/Misc/DropBeacon</texPath>
+      <texPath>Things/Building/Misc/GiantShipMagnet</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <volume>(0.3, 0.2, 0.3)</volume>
@@ -17,39 +17,39 @@
       <drawSize>(6,6)</drawSize>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
-    <thingCategories>
-      <li>BuildingsMisc</li>
-    </thingCategories>
     <size>(6,6)</size>
     <statBases>
-      <MaxHitPoints>9001</MaxHitPoints>
-      <WorkToBuild>123123</WorkToBuild>
-      <Flammability>1</Flammability>
+      <MaxHitPoints>600</MaxHitPoints>
+      <WorkToBuild>80000</WorkToBuild>
+      <Flammability>0.5</Flammability>
     </statBases>
     <description>A gigantic magnet that attracts ship parts from outer space - whether they're a danger to your colony or not. Must be placed outside.</description>
     <drawerType>MapMeshAndRealTime</drawerType>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <fillPercent>0.73</fillPercent>
     <costList>
-      <Component>1</Component>
+      <Steel>500</Steel>
+      <Plasteel>80</Plasteel>
+      <Uranium>50</Uranium>
+      <ComponentSpacer>7</ComponentSpacer>
     </costList>
     <comps>
       <li Class="Codename_Project_RIM.CompProperties_ShipAttractor">
         <shipIncidentMTBDaysPairs>
           <li>
             <key>PsychicEmanatorShipPartCrash</key>
-            <value>500</value>
+            <value>40</value>
           </li>
           <li>
             <key>PoisonShipPartCrash</key>
-            <value>500</value>
+            <value>40</value>
           </li>
           <li>
             <key>ShipChunkDrop</key>
-            <value>100</value>
+            <value>10</value>
           </li>
         </shipIncidentMTBDaysPairs>
-        <minRefireDays>0.5</minRefireDays>
+        <minRefireDays>3</minRefireDays>
       </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>

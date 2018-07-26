@@ -15,11 +15,20 @@ namespace Codename_Project_RIM
 
         public CompProperties_ShipAttractor Props => (CompProperties_ShipAttractor)props;
 
-        private List<float> MTBDaysList => Props.shipIncidentMTBDaysPairs.Values.ToList();
+        public List<float> MTBDaysList => Props.shipIncidentMTBDaysPairs.Values.ToList();
 
-        private int ShipPartMTBDaysLength => MTBDaysList.Count;
+        public int ShipPartMTBDaysLength => MTBDaysList.Count;
 
-        private Dictionary<int, IncidentDef> ShipPartsIndexed
+        public bool CanAttractShipParts
+        {
+            get
+            {
+                CompPowerTrader powerTraderComp = parent.TryGetComp<CompPowerTrader>();
+                return ticksUntilCanRefire <= 0 && (powerTraderComp != null) ? powerTraderComp.PowerOn : true;
+            }
+        }
+
+        public Dictionary<int, IncidentDef> ShipPartsIndexed
         {
             get
             {
@@ -33,29 +42,51 @@ namespace Codename_Project_RIM
             }
         }
 
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        {
+            if (Prefs.DevMode)
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "Debug: Force ship part incident",
+                    action = delegate
+                    {
+                        TryFireShipPartIncidents(true);
+                    }
+                };
+            }
+        }
+
         public override void CompTick()
         {
             ticksUntilCanRefire--;
-            if (ticksUntilCanRefire <= 0)
+            if (CanAttractShipParts)
             {
-                int i = 0;
-                bool canFireIncident = false;
-                while (i < ShipPartMTBDaysLength)
+                TryFireShipPartIncidents();
+            }
+        }
+
+        private void TryFireShipPartIncidents(bool forced = false)
+        {
+            List<IncidentDef> incidentsToFire = GetIncidentsToFire(forced).ToList();
+
+            if (!incidentsToFire.NullOrEmpty())
+            {
+                foreach (IncidentDef incident in incidentsToFire)
                 {
-                    if (Rand.MTBEventOccurs(MTBDaysList[i], GenDate.TicksPerDay, 1f))
-                    {
-                        canFireIncident = true;
-                        break;
-                    }
-                    i++;
-                }
-                if (canFireIncident)
-                {
-                    IncidentDef incident = ShipPartsIndexed[i];
                     IncidentParms parms = StorytellerUtility.DefaultParmsNow(incident.category, Find.Maps.Where(x => x.IsPlayerHome).RandomElement());
                     incident.Worker.TryExecute(parms);
-                    ticksUntilCanRefire = Mathf.RoundToInt(Props.minRefireDays * GenDate.TicksPerDay);
                 }
+                ticksUntilCanRefire = Mathf.RoundToInt(Props.minRefireDays * GenDate.TicksPerDay);
+            }
+        }
+
+        private IEnumerable<IncidentDef> GetIncidentsToFire(bool forced)
+        {
+            for (int i = 0; i < ShipPartMTBDaysLength; i++)
+            {
+                if ((forced && Rand.Value >= 0.5f) || !forced && Rand.MTBEventOccurs(MTBDaysList[i], GenDate.TicksPerDay, 60f))
+                    yield return ShipPartsIndexed[i];
             }
         }
 
