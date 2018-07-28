@@ -6,7 +6,7 @@
 		<label>mortar shell (thrown)</label>
 		<graphicData>
 			<texPath>Things/Item/Resource/Shell/Shell_HighExplosive</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<thingClass>Projectile_Explosive</thingClass>
 		<projectile>
@@ -23,7 +23,7 @@
 		<equipmentType>Primary</equipmentType>
 		<graphicData>
 			<texPath>Things/Item/Resource/Shell/Shell_HighExplosive</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
