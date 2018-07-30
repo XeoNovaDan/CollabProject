@@ -6,39 +6,41 @@
 		<label>shotgun dog</label>
 		<description>A very versatile, medium-sized shotgun/dog hybrid. Originally bred to shoot birds on the hunt, the shotgun dog is, to say the least, also an excellent guard dog, play pal, and family friend.</description>
 		<statBases>
-			<MoveSpeed>4.20</MoveSpeed>
+			<MoveSpeed>4.84</MoveSpeed>
 			<ComfyTemperatureMin>-8</ComfyTemperatureMin>
 			<MarketValue>450</MarketValue>
 		</statBases>
-		<tools>
-      <li>
-        <label>jazz hands</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>3.6</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-      </li>
-	  <li>
-        <label>pump-action tail</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>3.6</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>8 inch claw</label>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>3.6</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-      </li>
-    </tools>
+		<verbs>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTime>1.65</defaultCooldownTime>
+				<meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+				<meleeDamageDef>Scratch</meleeDamageDef>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTime>1.65</defaultCooldownTime>
+				<meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+				<meleeDamageDef>Scratch</meleeDamageDef>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTime>1.26</defaultCooldownTime>
+				<meleeDamageBaseAmount>20</meleeDamageBaseAmount>
+				<meleeDamageDef>Bullet</meleeDamageDef>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTime>1.65</defaultCooldownTime>
+				<meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+				<meleeDamageDef>Blunt</meleeDamageDef>
+				<commonality>0.01</commonality>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+		</verbs>
 		<race>
 			<body>QuadrupedAnimalWithPawsAndTail</body>
 			<petness>1</petness>
@@ -107,7 +109,7 @@
 					<color>(220,198,160)</color>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/Labrador/Dessicated_Labrador/</texPath>
+					<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
 					<drawSize>0.95</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
@@ -122,7 +124,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/Labrador/Dessicated_Labrador</texPath>
+					<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
 					<drawSize>1.35</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
@@ -137,7 +139,7 @@
 				</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/Labrador/Dessicated_Labrador</texPath>
+					<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
 					<drawSize>1.6</drawSize>
 				</dessicatedBodyGraphicData>
 				<butcherBodyPart>
