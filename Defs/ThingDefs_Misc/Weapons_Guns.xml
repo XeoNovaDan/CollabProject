@@ -166,7 +166,7 @@
         <power>9</power>
         <cooldownTime>2</cooldownTime>
       </li>
-    </tools>    
+    </tools>
   </ThingDef>
 
   <!-- Beer Gun -->
@@ -225,7 +225,7 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>complementary coaster</label>
         <capacities>
@@ -300,7 +300,7 @@
         <muzzleFlashScale>19</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>aerial</label>
         <capacities>
@@ -393,7 +393,7 @@
         <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>flying shell casing</label>
         <capacities>
@@ -482,7 +482,7 @@
         <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>fuzzy dice</label>
         <capacities>
@@ -569,6 +569,8 @@
     <projectile>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>44</damageAmountBase>
+      <stoppingPower>0.4</stoppingPower>
+      <armorPenetrationBase>0.44</armorPenetrationBase>
       <speed>44</speed>
     </projectile>
   </ThingDef>
@@ -617,7 +619,7 @@
         <muzzleFlashScale>44</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>#4 iron</label>
         <capacities>
@@ -701,7 +703,7 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>most expensive part</label>
         <capacities>
@@ -719,7 +721,7 @@
         <power>9</power>
         <cooldownTime>2</cooldownTime>
       </li>
-    </tools>    
+    </tools>
   </ThingDef>
 
 </Defs>
