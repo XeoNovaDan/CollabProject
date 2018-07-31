@@ -4,7 +4,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>ShotgunDog</defName>
 		<label>shotgun dog</label>
-		<description>A very versatile, medium-sized shotgun/dog hybrid. Originally bred to shoot birds on the hunt, the shotgun dog is, to say the least, also an excellent guard dog, play pal, and family friend.</description>
+		<description>A very versatile, medium-ranged shotgun/dog hybrid. Originally bred to shoot birds on the hunt, the shotgun dog is, to say the least, also an excellent guard dog, play pal, and family friend.</description>
 		<statBases>
 			<MoveSpeed>4.20</MoveSpeed>
 			<ComfyTemperatureMin>-8</ComfyTemperatureMin>
@@ -20,7 +20,7 @@
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
-	  <li>
+      <li>
         <label>pump-action tail</label>
         <capacities>
           <li>Blunt</li>
@@ -40,7 +40,7 @@
       </li>
     </tools>
 		<race>
-			<body>QuadrupedAnimalWithPawsAndTail</body>
+			<body>QuadrupedAnimalWithPawsOfFightingJawsOfBitingAndTailOfSwiping</body>
 			<petness>1</petness>
 			<herdAnimal>true</herdAnimal>
 			<baseBodySize>1</baseBodySize>
