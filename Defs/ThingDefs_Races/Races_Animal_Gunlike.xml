@@ -27,7 +27,7 @@
         </capacities>
         <power>3.6</power>
         <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>SD_Tail</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
       </li>
       <li>
         <label>8 inch claw</label>
