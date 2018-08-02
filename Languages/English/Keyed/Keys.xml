@@ -6,6 +6,13 @@
     <LetterThrumboCrackTransformation>{0} has transformed into a manhunting thrumbo due to {1} thrumbo crack withdrawal!</LetterThrumboCrackTransformation>
     <TransformedThrumboBonded>{0} has a bond with {1} due to their strong relationship.</TransformedThrumboBonded>
 
+    <!-- Ban hammer -->
+    <BanhammerGoneHaywire>{0}'s ban hammer has gone haywire and is banning a random target!</BanhammerGoneHaywire>
+    <PawnBannedMessage>{0} has been banned by {1}.</PawnBannedMessage>
+    <RandomNonPlayerHumanlikeBannedMessage>A random {0}, {1}, has been banned by {2}.</RandomNonPlayerHumanlikeBannedMessage>
+    <RandomPawnBannedMessage>A random {0} has been banned by {1}.</RandomPawnBannedMessage>
+    <WildManBannedMessage>A local wild man, {0}, has been banned by {1}.</WildManBannedMessage>
+
     <!-- Dakka mote thrower -->
     <Dakka>Dakka</Dakka>
 

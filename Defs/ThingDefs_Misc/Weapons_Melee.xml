@@ -109,4 +109,52 @@
 		</tools>
 	</ThingDef>
 
+	<ThingDef ParentName="BalancedBaseMeleeWeapon_Blunt">
+		<defName>MeleeWeapon_BanHammer</defName>
+		<label>ban hammer</label>
+		<description>An advanced blunt weapon that can ban anybody that it hits. Do note that the R&amp;D team at Project RIM™ Labs have found minor defects with this particular model of ban hammer, including large explosions upon banning and even random people or animals getting banned instead of the intended target - even the wielder.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Mace</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<costStuffCount>50</costStuffCount>
+		<statBases>
+			<WorkToMake>6000</WorkToMake>
+			<Mass>3</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+		</stuffCategories>
+		<weaponTags>
+			<li>MedievalMeleeDecent</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Ban</li>
+				</capacities>
+				<power>20.4</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
 </Defs>

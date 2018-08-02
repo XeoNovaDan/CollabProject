@@ -9,7 +9,7 @@ using Harmony;
 
 namespace Codename_Project_RIM
 {
-    class NewCS
+    public class NewCS
     {
     }
 }
