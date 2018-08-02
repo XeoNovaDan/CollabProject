@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
   <ThingDef ParentName="MakeableDrugBase">
     <defName>ThrumboCrack</defName>
     <label>thrumbo crack</label>
-    <description>A fine white powder snorted to produce a euphoric high. Thrumbo crack reduces the colony's need for food storage expansions, grants wisdom and suppresses pain. It is, however, very addictive.\n\nThere have been various reported cases of biological organisms that have consumed thrumbo crack actually growing thrumbo horns. We do not take any responsibility for the implications that may come with this.\n\nWithdrawal may result in the affected person actually turning into a manhunting thrumbo. Always read the label.</description>
+    <description>A fine white powder snorted to produce a euphoric high. Thrumbo crack reduces the colony's need for food storage expansions, grants wisdom, and is said to improve sex drive. It is, however, very addictive.\n\nThere have been various reported cases of biological organisms that have consumed thrumbo crack actually growing thrumbo horns. We do not take any responsibility for the implications that may come with this.\n\nWithdrawal may result in the affected person actually turning into a manhunting thrumbo. Always read the label.</description>
     <graphicData>
       <texPath>Things/Item/Drug/Thrumbo_Crack</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -69,8 +68,8 @@
         <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
         <listOrder>100</listOrder>
         <overdoseSeverityOffset>
-          <min>0.75</min>
-          <max>0.92</max>
+          <min>0.749</min>
+          <max>0.749</max>
         </overdoseSeverityOffset>
         <!-- <largeOverdoseChance>0.01</largeOverdoseChance> -->
       </li>
@@ -95,11 +94,11 @@
       <li>
         <!-- <painFactor>0.08</painFactor> -->
         <painOffset>0.15</painOffset>
-        <hungerRateFactorOffset>3.5</hungerRateFactorOffset>
+        <hungerRateFactorOffset>6.66</hungerRateFactorOffset>
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>0.15</offset>
+            <offset>6.66</offset>
           </li>
         </capMods>
         <hediffGivers>
@@ -112,10 +111,10 @@
           </li>
         </hediffGivers>
         <statOffsets>
-          <ArmorRating_Blunt>1.844</ArmorRating_Blunt>
-          <ArmorRating_Sharp>1.844</ArmorRating_Sharp>
-          <ArmorRating_Heat>1.844</ArmorRating_Heat>
-          <GlobalLearningFactor>3</GlobalLearningFactor>
+          <ArmorRating_Blunt>1.337</ArmorRating_Blunt>
+          <ArmorRating_Sharp>1.337</ArmorRating_Sharp>
+          <ArmorRating_Heat>1.337</ArmorRating_Heat>
+          <GlobalLearningFactor>6.66</GlobalLearningFactor>
         </statOffsets>
       </li>
     </stages>
@@ -130,7 +129,7 @@
       <li>
         <label>high on thrumbo crack</label>
         <description>REEEEEEEEEE\n-I've been shot-\nREEEEEEEEE\nSounds of doors breaking</description>
-        <baseMoodEffect>45</baseMoodEffect>
+        <baseMoodEffect>451</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -159,7 +158,7 @@
     <defName>Chemical_ThrumboCrack</defName>
     <needClass>Need_Chemical</needClass>
     <label>thrumbo crack</label>
-    <description>Because of a thrumbo crack addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <description>Because of a thrumbo crack addiction, this person needs to regularly consume the drug to avoid transmogrification.</description>
     <listPriority>50</listPriority>
   </NeedDef>
 
@@ -275,7 +274,7 @@
       </li>
       <li>
         <label>thrumbo crack withdrawal</label>
-        <description>REEEEEEEEEE\n-I've been shot-\nREEEEEEEEE\nSounds of doors breaking</description>
+        <description>GOTTA GET A GRIP</description>
         <baseMoodEffect>-35</baseMoodEffect>
       </li>
     </stages>
