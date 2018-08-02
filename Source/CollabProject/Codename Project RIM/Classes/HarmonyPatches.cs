@@ -26,8 +26,10 @@ namespace Codename_Project_RIM
         // Dakka mote thrower
         public static void Postfix_TryCastShot(Verb_Shoot __instance, bool __result)
         {
-            if (__result)
-                MoteMaker.ThrowText(__instance.caster.DrawPos, __instance.caster.Map, "Dakka".Translate(), 4f);
+            PostWarmupMote extension = __instance.EquipmentSource.def.GetModExtension<PostWarmupMote>() ?? PostWarmupMote.defaultValues;
+            if (__result && extension.throwMote)
+                // I did try the [MustTranslate] attribute, but it didn't actually work
+                MoteMaker.ThrowText(__instance.caster.DrawPos, __instance.caster.Map, extension.moteTextTranslationKey.Translate(), 4f);
         }
 
     }

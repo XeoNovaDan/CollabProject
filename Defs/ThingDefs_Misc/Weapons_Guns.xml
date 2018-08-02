@@ -322,6 +322,11 @@
     <weaponTags>
       <li>EliteGun</li>
     </weaponTags>
+    <modExtensions>
+      <li Class="Codename_Project_RIM.PostWarmupMote">
+        <moteTextTranslationKey>Doo</moteTextTranslationKey>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 

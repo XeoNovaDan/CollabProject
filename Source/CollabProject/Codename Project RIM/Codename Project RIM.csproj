@@ -53,8 +53,12 @@
   <ItemGroup>
     <Compile Include="Classes\Comps\Thing\CompShipAttractor.cs" />
     <Compile Include="Classes\Comps\Thing\CompProperties_ShipAttractor.cs" />
+    <Compile Include="Classes\Comps\Thing\CompTargetable_AllMechanoidsOnTheMap.cs" />
+    <Compile Include="Classes\Comps\Thing\CompTargetEffect_ReduceMechanoid.cs" />
     <Compile Include="Classes\DamageWorkers\DamageWorker_Ban.cs" />
     <Compile Include="Classes\ModExtensions\BanDamageProps.cs" />
+    <Compile Include="Classes\ModExtensions\MechanoidReducerExtension.cs" />
+    <Compile Include="Classes\ModExtensions\PostWarmupMote.cs" />
     <Compile Include="Classes\Projectiles\Boomrat_Grenade.cs" />
     <Compile Include="Classes\Projectiles\ExplodingBullet.cs" />
     <Compile Include="Classes\Comps\Hediff\HediffCompProperties_ThrumboTransformer.cs" />
