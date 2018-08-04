@@ -512,7 +512,7 @@
   	<defName>Bullet_Medigun</defName>
   	<label>medicine</label>
   	<graphicData>
-  		<texPath>Things/Item/Resource/MedicineGlitterworld</texPath>
+  		<texPath>Things/Projectile/magicpills</texPath>
   		<graphicClass>Graphic_Single</graphicClass>
   	</graphicData>
   	<thingClass>Projectile_Explosive</thingClass>
