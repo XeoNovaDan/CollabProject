@@ -107,7 +107,7 @@
 					<color>(220,198,160)</color>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/Labrador/Dessicated_Labrador/</texPath>
+					<texPath>Things/Pawn/Animal/Labrador/Dessicated_Labrador</texPath>
 					<drawSize>0.95</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
