@@ -27,5 +27,29 @@
     		</li>
     	</stages>
     </HediffDef>
+	
+	<HediffDef>
+    <defName>ImpressiveBulge</defName>
+	<hediffClass>HediffWithComps</hediffClass>
+    <label>impressive bulge</label>
+	<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <stages>
+      <li/>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>ImpressiveBulge</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ImpressiveBulge</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>impressive bulge</label>
+        <description>I am a product of the future.</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 
 </Defs>

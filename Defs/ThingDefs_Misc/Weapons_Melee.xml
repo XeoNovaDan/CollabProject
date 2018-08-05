@@ -4,15 +4,15 @@
 	<ThingDef ParentName="BalancedBaseMeleeWeapon_Blunt">
 		<defName>MeleeWeapon_Banana</defName>
 		<label>banana</label>
-		<description>A long, yellow fruit chock full of potassium. Tastes good, hurts even better.</description>
+		<description>An excellent source of potassium, as well as a deadly weapon. Wielding it gives the user a rush of power.</description>
+		<tickerType>Rare</tickerType>
 		<graphicData>
 			<texPath>Item/Equipment/WeaponMelee/banana</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<tickerType>Rare</tickerType>
 		<comps>
 			<li Class="CompProperties_Rottable">
-				<daysToRotStart>15</daysToRotStart>
+				<daysToRotStart>30</daysToRotStart>
 				<rotDestroys>true</rotDestroys>
 			</li>
 		</comps>
@@ -21,7 +21,23 @@
 			<Beauty>1000</Beauty>
 			<!--DeteriorationRate>1000</DeteriorationRate-->
 			<Mass>2</Mass>
+			<WorkToMake>300</WorkToMake>
+			<Nutrition>1.0</Nutrition>
 		</statBases>
+	<ingestible>
+      <preferability>DesperateOnly</preferability>
+      <foodType>VegetableOrFruit</foodType>
+      <joy>1.0</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+	    <outcomeDoers>
+	    <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ImpressiveBulge</hediffDef>
+		  <severity>0.50</severity>
+        </li>
+		</outcomeDoers>
+    </ingestible>
 		<costList>
 			<ThrumboHorn>2</ThrumboHorn>
 		</costList>
