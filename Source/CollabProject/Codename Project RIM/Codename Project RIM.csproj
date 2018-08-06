@@ -64,6 +64,7 @@
     <Compile Include="Classes\Comps\Hediff\HediffCompProperties_ThrumboTransformer.cs" />
     <Compile Include="Classes\Comps\Hediff\HediffCompThrumboTransformer.cs" />
     <Compile Include="Classes\HarmonyPatches.cs" />
+    <Compile Include="Classes\Projectiles\Muffalo_Shell.cs" />
     <Compile Include="Classes\Projectiles\Projectile_TripleDoomsdayRocket.cs" />
     <None Include="NewCS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

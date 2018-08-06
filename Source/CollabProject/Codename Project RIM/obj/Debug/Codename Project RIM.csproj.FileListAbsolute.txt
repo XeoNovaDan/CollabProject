@@ -1,5 +1,4 @@
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\CollabProject\Assemblies\Codename Project RIM.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\CollabProject\Assemblies\Codename Project RIM.pdb
 C:\Users\Maniak\Documents\Visual Studio 2017\Projects\Codename Project RIM\Codename Project RIM\obj\Debug\Codename Project RIM.csprojResolveAssemblyReference.cache
 C:\Users\Maniak\Documents\Visual Studio 2017\Projects\Codename Project RIM\Codename Project RIM\obj\Debug\Codename Project RIM.csproj.CoreCompileInputs.cache
 C:\Users\Maniak\Documents\Visual Studio 2017\Projects\Codename Project RIM\Codename Project RIM\obj\Debug\Codename Project RIM.dll
@@ -12,3 +11,6 @@ E:\Documents\GitHub\CollabProject\Assemblies\Codename Project RIM.dll
 E:\Documents\GitHub\CollabProject\Source\CollabProject\Codename Project RIM\obj\Debug\Codename Project RIM.csprojAssemblyReference.cache
 E:\Documents\GitHub\CollabProject\Source\CollabProject\Codename Project RIM\obj\Debug\Codename Project RIM.csproj.CoreCompileInputs.cache
 E:\Documents\GitHub\CollabProject\Source\CollabProject\Codename Project RIM\obj\Debug\Codename Project RIM.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\CollabProject\Source\CollabProject\Codename Project RIM\obj\Debug\Codename Project RIM.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\CollabProject\Source\CollabProject\Codename Project RIM\obj\Debug\Codename Project RIM.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\CollabProject\Source\CollabProject\Codename Project RIM\obj\Debug\Codename Project RIM.dll
