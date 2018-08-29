@@ -112,4 +112,9 @@
 		</modExtensions>
 	</DamageDef>
 
+	<DamageDef ParentName="Bomb">
+		<defName>BrilliantBionicBoom</defName>
+		<workerClass>Codename_Project_RIM.DamageWorker_BionicGrenade</workerClass>
+	</DamageDef>
+
 </Defs>
