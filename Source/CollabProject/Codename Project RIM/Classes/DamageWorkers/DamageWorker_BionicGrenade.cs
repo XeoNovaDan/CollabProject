@@ -23,7 +23,11 @@ namespace Codename_Project_RIM
                 if (thing is Pawn pawn && pawn.health is Pawn_HealthTracker health)
                     foreach (HediffDef hediff in validHediffs)
                         if (Rand.Chance(hediffChance))
-                            health.AddHediff(hediff, pawn.RaceProps.body.AllParts.RandomElement());
+                        {
+                            BodyPartRecord part = pawn.RaceProps.body.AllParts.RandomElement();
+                            if (!health.hediffSet.PartOrAnyAncestorHasDirectlyAddedParts(part))
+                                health.AddHediff(hediff, part);
+                        }
         }
 
     }

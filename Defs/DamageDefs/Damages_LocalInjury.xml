@@ -115,6 +115,7 @@
 	<DamageDef ParentName="Bomb">
 		<defName>BrilliantBionicBoom</defName>
 		<workerClass>Codename_Project_RIM.DamageWorker_BionicGrenade</workerClass>
+		<defaultDamage>20</defaultDamage>
 	</DamageDef>
 
 </Defs>
