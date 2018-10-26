@@ -17,4 +17,7 @@
     <Doo>Doo</Doo>
     <Dakka>Dakka</Dakka>
 
+    <!-- Plot armor letter -->
+    <PlotArmorCreated>{0} has accidentally created a set of plot armor! Congratulations!</PlotArmorCreated>
+
 </LanguageData>

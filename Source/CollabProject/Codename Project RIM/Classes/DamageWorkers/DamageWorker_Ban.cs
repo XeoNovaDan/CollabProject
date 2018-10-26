@@ -79,9 +79,11 @@ namespace Codename_Project_RIM
                 Messages.Message("BanhammerGoneHaywire".Translate(instigator.LabelShort), MessageTypeDefOf.CautionInput);
             if (BanMessage(pawnToBan, instigator, haywire, new LookTargets(center, map), out Message message))
                 Messages.Message(message);
+            float bodySize = pawnToBan.BodySize;
             pawnToBan.Destroy();
             if (BanProps.explosionDamageDef != null)
-                GenExplosion.DoExplosion(center, map, BanProps.explosionRadius, BanProps.explosionDamageDef, null);
+                GenExplosion.DoExplosion(center, map, AdjustedBanExplosionRadius(BanProps.explosionRadius, bodySize), BanProps.explosionDamageDef, null,
+                    AdjustedBanExplosionDamage(BanProps.explosionDamageDef.defaultDamage, bodySize));
         }
 
         private bool BanMessage(Pawn pawnToBan, Thing instigator, bool haywire, LookTargets lookTargets, out Message message)
@@ -107,6 +109,9 @@ namespace Codename_Project_RIM
             }
             return message != null;
         }
+
+        private int AdjustedBanExplosionDamage(int damage, float bodySize) => (int)(damage * bodySize);
+        private float AdjustedBanExplosionRadius(float radius, float bodySize) => radius + ((bodySize + 1) / 2);
 
     }
 }

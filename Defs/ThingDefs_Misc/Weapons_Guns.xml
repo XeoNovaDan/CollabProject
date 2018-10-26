@@ -129,6 +129,7 @@
     </recipeMaker>
     <techLevel>Industrial</techLevel>
     <weaponTags>
+      <li>IndustrialGunAdvanced</li>
       <li>GunHeavy</li>
     </weaponTags>
     <equippedStatOffsets>
@@ -166,7 +167,7 @@
         <power>9</power>
         <cooldownTime>2</cooldownTime>
       </li>
-    </tools>    
+    </tools>
   </ThingDef>
 
   <!-- Beer Gun -->
@@ -225,7 +226,7 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>complementary coaster</label>
         <capacities>
@@ -300,7 +301,7 @@
         <muzzleFlashScale>19</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>aerial</label>
         <capacities>
@@ -398,7 +399,7 @@
         <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>flying shell casing</label>
         <capacities>
@@ -487,7 +488,7 @@
         <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>fuzzy dice</label>
         <capacities>
@@ -574,7 +575,7 @@
     <projectile>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>44</damageAmountBase>
-	  <stoppingPower>0.4</stoppingPower>
+      <stoppingPower>0.4</stoppingPower>
       <armorPenetrationBase>0.44</armorPenetrationBase>
       <speed>44</speed>
     </projectile>
@@ -624,7 +625,7 @@
         <muzzleFlashScale>44</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>#4 iron</label>
         <capacities>
@@ -708,7 +709,7 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
-        <tools>
+    <tools>
       <li>
         <label>most expensive part</label>
         <capacities>
@@ -726,7 +727,94 @@
         <power>9</power>
         <cooldownTime>2</cooldownTime>
       </li>
-    </tools>    
+    </tools>
+  </ThingDef>
+
+  <!-- muffalo launcher -->
+
+  <ThingDef ParentName="BalancedBaseGun">
+    <defName>Gun_MuffaloLauncher</defName>
+    <label>muffalo launcher</label>
+    <description>A single-use rocket launcher that's been repurposed to fire an adowoable lil' muffalo.\n\nBecause of its unwieldiness, single-use limitation, and the massive destruction it causes, it's said that one must be slightly crazy to use this weapon.</description>
+    <tickerType>Normal</tickerType>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Item/Equipment/WeaponRanged/MuffaloLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>8</Mass>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>Gun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>SingleUseWeapon</li>
+    </thingSetMakerTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_MuffaloLauncher</defaultProjectile>
+        <warmupTime>4.5</warmupTime>
+        <ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
+        <range>35.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>loading chute</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>muffalo</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BalancedBaseBullet">
+    <defName>Bullet_MuffaloLauncher</defName>
+    <label>muffalo</label>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Muffalo/Muffalo_north</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Codename_Project_RIM.Muffalo_Shell</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>26</damageAmountBase>
+      <speed>26</speed>
+    </projectile>
   </ThingDef>
 
 </Defs>

@@ -13,8 +13,9 @@ namespace Codename_Project_RIM
     {
 
         public static HediffDef ThrumboCrackAddiction;
-
         public static HediffDef ThrumboHornGrowth;
+
+        public static HediffDef LaunchedAnimalBloodlust;
 
     }
 }

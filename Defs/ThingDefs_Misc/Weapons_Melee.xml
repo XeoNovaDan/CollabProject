@@ -129,8 +129,9 @@
 		<defName>MeleeWeapon_BanHammer</defName>
 		<label>ban hammer</label>
 		<description>An advanced blunt weapon that can ban anybody that it hits. Do note that the R&amp;D team at Project RIM™ Labs have found minor defects with this particular model of ban hammer, including large explosions upon banning and even random people or animals getting banned instead of the intended target - even the wielder.</description>
+		<generateCommonality>0.5</generateCommonality>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponMelee/Mace</texPath>
+			<texPath>Item/Equipment/WeaponMelee/Banhammer</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Medieval</techLevel>
@@ -151,6 +152,7 @@
 		</stuffCategories>
 		<weaponTags>
 			<li>MedievalMeleeDecent</li>
+			<li>BanHammer</li>
 		</weaponTags>
 		<tools>
 			<li>

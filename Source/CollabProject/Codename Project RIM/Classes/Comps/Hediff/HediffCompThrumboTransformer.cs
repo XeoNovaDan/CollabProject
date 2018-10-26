@@ -47,11 +47,11 @@ namespace Codename_Project_RIM
 
                 // Try to bond with another colonist + set up letter text
                 string thrumboTransformLetterLabel = "LetterThrumboCrackTransformationLabel".Translate();
-                string thrumboTransformLetter = "LetterThrumboCrackTransformation".Translate(new object[] { Pawn.Label, Pawn.gender.GetPossessive() });
+                string thrumboTransformLetter = "LetterThrumboCrackTransformation".Translate(Pawn.Label, Pawn.gender.GetPossessive());
                 if (ThrumboTransformerUtility.TryGivePostTransformationBondRelation(ref newThrumbo, Pawn, out Pawn otherPawn))
                 {
                     thrumboTransformLetterLabel += " " + "BondBrackets".Translate();
-                    thrumboTransformLetter += "\n\n" + "TransformedThrumboBonded".Translate(new object[] { Pawn.gender.GetPronoun().CapitalizeFirst(), otherPawn.LabelShort });
+                    thrumboTransformLetter += "\n\n" + "TransformedThrumboBonded".Translate(Pawn.gender.GetPronoun().CapitalizeFirst(), otherPawn.LabelShort);
                 }
 
                 // Spawn thrumbo and remove pawn
