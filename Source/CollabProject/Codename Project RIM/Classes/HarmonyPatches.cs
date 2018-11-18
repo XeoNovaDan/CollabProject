@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 using RimWorld;
 using Harmony;
 
@@ -25,11 +26,16 @@ namespace Codename_Project_RIM
             harmony.Patch(AccessTools.Method(typeof(Pawn), nameof(Pawn.Kill)),
                 new HarmonyMethod(patchType, nameof(Prefix_Pawn_Kill)), null);
 
-            harmony.Patch(AccessTools.Method(typeof(PawnApparelGenerator), "GenerateWorkingPossibleApparelSetFor"),
-                new HarmonyMethod(patchType, nameof(Prefix_PawnApparelGenerator_GenerateWorkingPossibleApparelSetFor)), null);
+            // Currently not working properly
+            //harmony.Patch(AccessTools.Method(typeof(PawnApparelGenerator), "GenerateWorkingPossibleApparelSetFor"),
+            //    new HarmonyMethod(patchType, nameof(Prefix_PawnApparelGenerator_GenerateWorkingPossibleApparelSetFor)), null);
 
             harmony.Patch(AccessTools.Method(typeof(QualityUtility), nameof(QualityUtility.GenerateQualityCreatedByPawn), new[] { typeof(Pawn), typeof(SkillDef) }), null,
                 new HarmonyMethod(patchType, nameof(Postfix_QualityUtility_GenerateQualityCreatedByPawn)));
+
+            harmony.Patch(AccessTools.Method(typeof(Projectile), nameof(Projectile.Launch), new[] { typeof(Thing), typeof(Vector3), typeof(LocalTargetInfo), typeof(LocalTargetInfo),
+            typeof(ProjectileHitFlags), typeof(Thing), typeof(ThingDef)}),
+                new HarmonyMethod(patchType, nameof(Prefix_Projectile_Launch)), null);
 
         }
 
@@ -77,6 +83,39 @@ namespace Codename_Project_RIM
                     plotArmor.TryGetComp<CompQuality>().SetQuality(QualityUtility.AllQualityCategories.RandomElement(), ArtGenerationContext.Colony);
                     GenSpawn.Spawn(plotArmor, pawn.Position, pawn.Map);
                     Messages.Message("PlotArmorCreated".Translate(pawn.LabelShort), plotArmor, MessageTypeDefOf.PositiveEvent);
+                }
+            }
+        }
+
+        public static void Prefix_Projectile_Launch(Vector3 origin, ref LocalTargetInfo usedTarget, LocalTargetInfo intendedTarget)
+        {
+            if (intendedTarget.Thing is Pawn pawn && pawn.RaceProps.Humanlike && !PR_StatDefOf.WallBuildChance.Worker.IsDisabledFor(pawn))
+            {
+                float buildChance = pawn.GetStatValue(PR_StatDefOf.WallBuildChance);
+                Map map = pawn.Map;
+                IntVec3 pawnPos = pawn.PositionHeld;
+                IntVec3 wallPos;
+                if (origin == null)
+                    wallPos = GenRadial.RadialCellsAround(pawnPos, 1.9f, false).RandomElement();
+                else
+                {
+                    float angleFlat = (origin.ToIntVec3() - pawnPos).AngleFlat;
+                    if (angleFlat > 335f || angleFlat <= 45f)
+                        wallPos = pawnPos + IntVec3.North;
+                    else if (angleFlat <= 135f)
+                        wallPos = pawnPos + IntVec3.East;
+                    else if (angleFlat <= 225f)
+                        wallPos = pawnPos + IntVec3.South;
+                    else
+                        wallPos = pawnPos + IntVec3.West;
+                }
+                if (Rand.Chance(buildChance) && wallPos.GetFirstThing(map, ThingDefOf.Wall) == null)
+                {
+                    wallPos.GetThingList(map).Clear();
+                    Building wall = (Building)ThingMaker.MakeThing(ThingDefOf.Wall, GenStuff.AllowedStuffsFor(ThingDefOf.Wall).RandomElement());
+                    GenSpawn.Spawn(wall, wallPos, map);
+                    MoteMaker.ThrowText(pawn.DrawPos, map, "BuildoffSuccessful".Translate(), 4f);
+                    usedTarget = wall;
                 }
             }
         }

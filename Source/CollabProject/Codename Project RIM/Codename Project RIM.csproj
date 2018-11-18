@@ -68,6 +68,7 @@
     <Compile Include="Classes\Projectiles\Projectile_TripleDoomsdayRocket.cs" />
     <None Include="NewCS.cs" />
     <Compile Include="Classes\DamageWorkers\DamageWorker_BionicGrenade.cs" />
+    <Compile Include="Classes\StaticClasses\DefOf\PR_StatDefOf.cs" />
     <Compile Include="Classes\StaticClasses\DefOf\PR_ThingDefOf.cs" />
     <Compile Include="Classes\StaticClasses\Utilities\LaunchedAnimalUtility.cs" />
     <Compile Include="Classes\StaticClasses\Utilities\PlotArmorUtility.cs" />
